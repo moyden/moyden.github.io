@@ -1,7 +1,7 @@
 body {
-  background: #f4f4f4;
-  font-family: Helvetica Neue;
-  font-weight: 400;
+  background: white;
+  font-family: Muli;
+  font-weight: 300;
   font-size: 10pt;
   margin: auto;
   width: 1280px;
@@ -10,7 +10,7 @@ body {
 
 header {
   width: 80%;
-  margin-bottom: 18px; }
+  margin-bottom: 36px; }
 
 header, footer {
   float: left;
@@ -22,12 +22,11 @@ footer ul {
 
 .container {
   float: right;
-  width: 1008px;
-  margin-bottom: 36px; }
+  width: 1008px; }
 
 section {
   float: left;
-  width: 636px;
+  width: 972px;
   margin-bottom: 18px; }
 
 section.index-category {
@@ -45,24 +44,26 @@ img.screencap {
 
 h1 {
   text-transform: uppercase;
-  margin-bottom: 9px; }
+  margin-bottom: 9px;
+  font-weight: 600; }
 
 header h1 {
   font-size: 20pt;
   white-space: nowrap;
   margin-bottom: 9px;
-  display: inline; }
+  display: inline;
+  letter-spacing: 1.42857pt; }
 
 p {
   text-align: justify;
   max-width: 636px; }
 
 footer, p, section ul {
-  line-height: 14pt;
+  line-height: 16pt;
   margin-bottom: 10pt; }
 
 footer a:hover, p a:hover, li a:hover {
-  background-color: #fcfcfc; }
+  background-color: white; }
 
 section li {
   list-style: none; }
