@@ -3,45 +3,7 @@
   src: url(/assets/fonts/SofiaProLight-webfont.eot);
   src: url(/assets/fonts/SofiaProLight-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/SofiaProLight-webfont.woff) format("woff"), url(/assets/fonts/SofiaProLight-webfont.ttf) format("truetype"), url(/assets/fonts/SofiaProLight-webfont.svg#webfont) format("svg"); }
 body {
-  background: #ecf0f1;
-  color: #303030;
-  font-family: "Lato";
-  padding: 0 10em 0 10em; }
-
-a {
-  color: #303030;
-  text-decoration: none; }
-
-header {
-  display: flex;
-  text-transform: uppercase;
-  align-items: baseline;
-  letter-spacing: 0.1em;
-  padding: 2em 0 2em 0; }
-
-header h1 {
-  font-size: 2em;
-  flex-grow: 1; }
-
-header nav ul li {
-  display: inline-block;
-  font-size: 1.3em;
-  padding-left: 0.5em; }
-
-section.film-index {
-  display: flex;
-  justify-content: space-between; }
-
-h1 {
-  font-weight: 600; }
-
-section.film-index div {
-  flex-basis: 30%; }
-
-section.film-index li {
-  list-style-type: none;
-  padding-top: 0.5em;
-  font-weight: 300; }
+  font-family: 'Helvetica', 'Arial', sans-serif; }
 
 .embed-container {
   position: relative;
