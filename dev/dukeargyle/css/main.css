@@ -45,7 +45,7 @@ section.video {
 
 section.text {
   flex: 1;
-  padding: 2em 0; }
+  padding: 2em 0 0 0; }
   section.text h1 {
     text-transform: uppercase;
     margin-bottom: 1em;
@@ -89,7 +89,7 @@ section.collection {
 
 footer {
   padding-bottom: 2em;
-  margin-top: 2em;
+  margin-top: 1.5em;
   text-align: center;
   color: #aaa; }
 
