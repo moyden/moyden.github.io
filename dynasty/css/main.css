@@ -44,6 +44,28 @@ section.title.open a:hover,
 section.title.open a:focus {
   color: #666; }
 
+p a,
+p a:link,
+p a:visited,
+p a:active {
+  text-decoration: none;
+  color: #666; }
+p a:hover,
+p a:focus {
+  text-decoration: none;
+  color: #000; }
+
+h1 a,
+h1 a:link,
+h1 a:visited,
+h1 a:active {
+  text-decoration: none;
+  color: #666; }
+h1 a:hover,
+h1 a:focus {
+  text-decoration: none;
+  color: #000; }
+
 nav ul li {
   margin-top: 1.2em;
   color: #fcfcfc; }
