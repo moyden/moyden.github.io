@@ -226,6 +226,24 @@ section#former p {
   text-align: justify;
   line-height: 1.5em; }
 
+h3 {
+  width: 100%;
+  text-align: left;
+  font-size: 1em;
+  text-transform: uppercase;
+  padding: 0em 2em 1em 2em;
+  font-weight: 800; }
+
+section.rules p {
+  padding: 0em 2em 1em 2em;
+  text-align: justify; }
+section.rules ul {
+  padding: 0em 2em 1em 2em; }
+section.rules li {
+  position: relative;
+  left: 2em;
+  list-style: circle; }
+
 @media only screen and (min-width: 900px) {
   body {
     max-width: 900px; }
