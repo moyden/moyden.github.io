@@ -1,36 +1,36 @@
 Team,Player,Position,Contract Value,Contract Length,Dropped
 Colorado Pony Hospital,Matthew Stafford,QB,2,1,true
-Colorado Pony Hospital,Derek Carr,QB,6,,false
-Colorado Pony Hospital,Carson Palmer,QB,4,,false
+Colorado Pony Hospital,Derek Carr,QB,6,1,false
+Colorado Pony Hospital,Carson Palmer,QB,4,1,false
 Colorado Pony Hospital,LeSean McCoy,RB,25,1,false
 Colorado Pony Hospital,Melvin Gordon,RB,16,3,false
-Colorado Pony Hospital,Jeremy Langford,RB,13,,false
-Colorado Pony Hospital,Thomas Rawls,RB,9,,false
-Colorado Pony Hospital,Matt Jones,RB,4,,false
-Colorado Pony Hospital,Giovani Bernard,RB,2,,false
+Colorado Pony Hospital,Jeremy Langford,RB,13,1,false
+Colorado Pony Hospital,Thomas Rawls,RB,9,3,false
+Colorado Pony Hospital,Matt Jones,RB,4,2,false
+Colorado Pony Hospital,Giovani Bernard,RB,2,3,false
 Colorado Pony Hospital,David Cobb,RB,2,3,true
 Colorado Pony Hospital,Ryan Mathews,RB,3,1,true
 Colorado Pony Hospital,Sammy Watkins,WR,21,1,false
-Colorado Pony Hospital,Brandon Marshall,WR,18,,false
+Colorado Pony Hospital,Brandon Marshall,WR,18,1,false
 Colorado Pony Hospital,Davante Adams,WR,12,4,false
-Colorado Pony Hospital,Demaryius Thomas,WR,10,,false
+Colorado Pony Hospital,Demaryius Thomas,WR,10,2,false
 Colorado Pony Hospital,Jordy Nelson,WR,9,3,false
-Colorado Pony Hospital,Eric Decker,WR,7,,false
-Colorado Pony Hospital,Breshad Perriman,WR,3,1,false
-Colorado Pony Hospital,Allen Robinson,WR,3,2,false
+Colorado Pony Hospital,Eric Decker,WR,7,2,false
 Colorado Pony Hospital,Kevin White,WR,3,3,false
+Colorado Pony Hospital,Allen Robinson,WR,3,2,false
 Colorado Pony Hospital,John Brown,WR,3,2,false
+Colorado Pony Hospital,Breshad Perriman,WR,3,1,false
 Colorado Pony Hospital,Marvin Jones,WR,1,2,false
 Colorado Pony Hospital,Jimmy Graham,TE,24,1,true
-Colorado Pony Hospital,Eric Ebron,TE,1,,false
-Dillon Panthers,Nick Foles,QB,1,1,true
+Colorado Pony Hospital,Eric Ebron,TE,1,2,false
 Dillon Panthers,Peyton Manning,QB,15,1,true
-Dillon Panthers,Blake Bortles,QB,3,,false
+Dillon Panthers,Nick Foles,QB,1,1,true
+Dillon Panthers,Blake Bortles,QB,3,5,false
 Dillon Panthers,Le'Veon Bell,RB,59,4,false
 Dillon Panthers,Jamaal Charles,RB,59,2,false
 Dillon Panthers,Arian Foster,RB,10,1,false
 Dillon Panthers,LeGarrette Blount,RB,5,1,false
-Dillon Panthers,Dion Lewis,RB,3,,false
+Dillon Panthers,Dion Lewis,RB,3,3,false
 Dillon Panthers,Knile Davis,RB,2,1,true
 Dillon Panthers,Darren McFadden,RB,1,1,true
 Dillon Panthers,Denard Robinson,RB,1,2,false
@@ -38,36 +38,36 @@ Dillon Panthers,Cameron Artis-Payne,RB,1,2,false
 Dillon Panthers,Julian Edelman,WR,17,3,false
 Dillon Panthers,Brandin Cooks,WR,15,4,false
 Dillon Panthers,Nelson Agholor,WR,4,3,false
-Dillon Panthers,Sterling Shepherd,WR,3,,false
+Dillon Panthers,Sterling Shepherd,WR,3,5,false
 Dillon Panthers,Brian Quick,WR,1,1,true
+Dillon Panthers,Markus Wheaton,WR,1,3,false
 Dillon Panthers,Torrey Smith,WR,1,1,false
-Dillon Panthers,Markus Wheaton,WR,1,,false
-Dillon Panthers,Gary Barnidge,TE,2,,false
-Dillon Panthers,Coby Fleener,TE,2,,false
+Dillon Panthers,Coby Fleener,TE,2,4,false
+Dillon Panthers,Gary Barnidge,TE,2,3,false
 Dillon Panthers,Richard Rodgers,TE,1,2,false
 Dynasty Warriors II,Andrew Luck,QB,36,4,false
-Dynasty Warriors II,Aaron Rodgers,QB,16,,false
+Dynasty Warriors II,Aaron Rodgers,QB,16,1,false
 Dynasty Warriors II,Ameer Abdullah,RB,12,4,false
+Dynasty Warriors II,Bishop Sankey,RB,2,1,true
 Dynasty Warriors II,Tre Mason,RB,1,1,true
 Dynasty Warriors II,Charles Sims,RB,1,1,false
 Dynasty Warriors II,Danny Woodhead,RB,1,1,false
 Dynasty Warriors II,DeAngelo Williams,RB,1,1,false
-Dynasty Warriors II,Bishop Sankey,RB,2,1,true
-Dynasty Warriors II,Theo Riddick,RB,1,,false
-Dynasty Warriors II,Justin Forsett,RB,1,,false
-Dynasty Warriors II,Christine Michael,RB,1,,false
-Dynasty Warriors II,Jay Ajayi,RB,1,,false
+Dynasty Warriors II,Theo Riddick,RB,1,1,false
+Dynasty Warriors II,Justin Forsett,RB,1,1,false
+Dynasty Warriors II,Christine Michael,RB,1,1,false
+Dynasty Warriors II,Jay Ajayi,RB,1,1,false
 Dynasty Warriors II,Dez Bryant,WR,49,2,false
 Dynasty Warriors II,Odell Beckham Jr.,WR,40,2,false
-Dynasty Warriors II,Michael Floyd,WR,3,,false
-Dynasty Warriors II,Michael Crabtree,WR,2,,false
-Dynasty Warriors II,Tavon Austin,WR,2,,false
+Dynasty Warriors II,Michael Floyd,WR,3,5,false
+Dynasty Warriors II,Michael Crabtree,WR,2,3,false
+Dynasty Warriors II,Tavon Austin,WR,2,2,false
+Dynasty Warriors II,Kendall Wright,WR,1,2,true
+Dynasty Warriors II,Laquon Treadwell,WR,1,5,false
 Dynasty Warriors II,Roddy White,WR,1,1,true
 Dynasty Warriors II,Anquan Boldin,WR,1,1,false
 Dynasty Warriors II,Terrance Williams,WR,1,1,false
-Dynasty Warriors II,Kendall Wright,WR,1,2,true
 Dynasty Warriors II,Larry Fitzgerald,WR,1,1,false
-Dynasty Warriors II,Laquon Treadwell,WR,1,,false
 Dynasty Warriors II,Delanie Walker,TE,1,1,false
 Jamaal About That Base,Tom Brady,QB,6,1,false
 Jamaal About That Base,Eli Manning,QB,1,3,false
@@ -76,18 +76,15 @@ Jamaal About That Base,Frank Gore,RB,11,1,false
 Jamaal About That Base,Andre Williams,RB,1,4,false
 Jamaal About That Base,Alfred Blue,RB,1,2,false
 Jamaal About That Base,Alfred Morris,RB,14,2,true
-Jamaal About That Base,James Starks,RB,1,,false
-Jamaal About That Base,Charcandrick West,RB,1,,false
-Jamaal About That Base,Darren Sproles,RB,1,,false
-Jamaal About That Base,James White,RB,1,,false
+Jamaal About That Base,Charcandrick West,RB,1,1,false
+Jamaal About That Base,Darren Sproles,RB,1,1,false
+Jamaal About That Base,James White,RB,1,1,false
 Jamaal About That Base,Randall Cobb,WR,35,4,false
 Jamaal About That Base,T.Y. Hilton,WR,29,2,false
 Jamaal About That Base,Golden Tate,WR,6,4,false
-Jamaal About That Base,Stefon Diggs,WR,1,,false
-Jamaal About That Base,Willie Snead,WR,1,,false
-Jamaal About That Base,Kamar Aiken,WR,1,,false
-Jamaal About That Base,Tyler Boyd,WR,1,,false
-Jamaal About That Base,Michael Thomas,WR,1,,false
+Jamaal About That Base,Tyler Boyd,WR,1,4,false
+Jamaal About That Base,Michael Thomas,WR,1,3,false
+Jamaal About That Base,Kamar Aiken,WR,1,1,false
 Jamaal About That Base,Rob Gronkowski,TE,41,4,false
 Jamaal About That Base,Jason Witten,TE,1,1,false
 LOL Boys,Cam Newton,QB,3,1,false
@@ -95,36 +92,36 @@ LOL Boys,Jameis Winston,QB,1,3,false
 LOL Boys,C.J. Anderson,RB,41,1,true
 LOL Boys,Matt Forte,RB,30,1,false
 LOL Boys,Justin Forsett,RB,13,1,true
-LOL Boys,Ryan Mathews,RB,7,,false
-LOL Boys,Rashad Jennings,RB,4,,false
-LOL Boys,Bilal Powell,RB,2,,false
-LOL Boys,Terrance West,RB,1,,false
-LOL Boys,DeAndre Washington,RB,1,,false
+LOL Boys,Ryan Mathews,RB,7,1,false
+LOL Boys,Rashad Jennings,RB,4,1,false
+LOL Boys,Bilal Powell,RB,2,1,false
+LOL Boys,Terrance West,RB,1,1,false
+LOL Boys,DeAndre Washington,RB,1,1,false
 LOL Boys,Antonio Brown,WR,49,3,false
 LOL Boys,Alshon Jeffery,WR,26,3,false
 LOL Boys,Jarvis Landry,WR,6,2,false
-LOL Boys,Josh Gordon,WR,3,,false
+LOL Boys,Josh Gordon,WR,3,2,false
 LOL Boys,Jeremy Maclin,WR,2,1,false
 LOL Boys,Kelvin Benjamin,WR,1,4,false
-LOL Boys,Charles Johnson,WR,2,1,true
 LOL Boys,Dorial Green-Beckham,WR,2,2,true
-LOL Boys,Tajae Sharpe,WR,1,,false
-LOL Boys,Josh Doctson,WR,1,,false
-LOL Boys,Corey Coleman,WR,1,,false
-LOL Boys,Jordan Reed,TE,11,,false
+LOL Boys,Charles Johnson,WR,2,1,true
+LOL Boys,Tajae Sharpe,WR,1,4,false
+LOL Boys,Josh Doctson,WR,1,4,false
+LOL Boys,Corey Coleman,WR,1,4,false
+LOL Boys,Jordan Reed,TE,11,2,false
 LOL Boys,Travis Kelce,TE,8,3,false
-LOL Boys,Martellus Bennett,TE,1,,false
+LOL Boys,Martellus Bennett,TE,1,1,false
 London Lizards,Drew Brees,QB,10,1,false
 London Lizards,Matt Ryan,QB,5,1,false
 London Lizards,Ben Roethlisberger,QB,4,1,false
 London Lizards,Tony Romo,QB,4,1,false
-London Lizards,Kirk Cousins,QB,2,,false
+London Lizards,Kirk Cousins,QB,2,3,false
 London Lizards,DeMarco Murray,RB,31,2,false
-London Lizards,Devonta Freeman,RB,25,,false
+London Lizards,Devonta Freeman,RB,25,5,false
 London Lizards,Mark Ingram,RB,20,3,false
-London Lizards,C.J. Anderson,RB,14,,false
+London Lizards,C.J. Anderson,RB,14,4,false
 London Lizards,Joseph Randle,RB,6,3,true
-London Lizards,Derrick Henry,RB,5,,false
+London Lizards,Derrick Henry,RB,5,5,false
 London Lizards,Chris Ivory,RB,4,2,false
 London Lizards,Jonathan Stewart,RB,2,1,false
 London Lizards,Joique Bell,RB,5,1,true
@@ -134,29 +131,28 @@ London Lizards,Keenan Allen,WR,13,2,false
 London Lizards,DeVante Parker,WR,4,2,false
 London Lizards,DeSean Jackson,WR,3,1,false
 London Lizards,Vincent Jackson,WR,2,1,false
-London Lizards,Steve Smith Sr.,WR,1,,false
+London Lizards,Steve Smith Sr.,WR,1,1,false
 London Lizards,Jordan Cameron,TE,5,1,true
-London Lizards,Jimmy Graham,TE,2,,false
-London Lizards,Zach Ertz,TE,1,,false
+London Lizards,Jimmy Graham,TE,2,1,false
+London Lizards,Zach Ertz,TE,1,4,false
 Oxford White Sharks,Ryan Tannehill,QB,3,2,false
-Oxford White Sharks,Tyrod Taylor,QB,2,,false
+Oxford White Sharks,Tyrod Taylor,QB,2,1,false
 Oxford White Sharks,Sam Bradford,QB,1,2,true
-Oxford White Sharks,Philip Rivers,QB,1,,false
-Oxford White Sharks,Ezekiel Elliot,RB,37,,false
+Oxford White Sharks,Philip Rivers,QB,1,1,false
+Oxford White Sharks,Ezekiel Elliot,RB,37,4,false
 Oxford White Sharks,Todd Gurley,RB,30,3,false
 Oxford White Sharks,Lamar Miller,RB,16,2,false
+Oxford White Sharks,Devontae Booker,RB,1,3,false
 Oxford White Sharks,Jerick McKinnon,RB,1,2,false
-Oxford White Sharks,Devontae Booker,RB,1,,false
-Oxford White Sharks,Spencer Ware,RB,1,,false
+Oxford White Sharks,Spencer Ware,RB,1,2,false
 Oxford White Sharks,Julio Jones,WR,35,3,false
 Oxford White Sharks,A.J. Green,WR,20,3,false
 Oxford White Sharks,Emmanuel Sanders,WR,19,1,false
 Oxford White Sharks,Amari Cooper,WR,11,4,false
-Oxford White Sharks,Donte Moncrief,WR,5,,false
+Oxford White Sharks,Donte Moncrief,WR,5,2,false
 Oxford White Sharks,Martavis Bryant,WR,4,4,false
 Oxford White Sharks,Jaelen Strong,WR,1,3,false
-Oxford White Sharks,Travis Benjamin,WR,1,,false
-Oxford White Sharks,Mohamed Sanu,WR,1,,false
+Oxford White Sharks,Travis Benjamin,WR,1,1,false
 Oxford White Sharks,Greg Olsen,TE,6,1,false
 Oxford White Sharks,Tyler Eifert,TE,1,2,false
 Team HGH,Russell Wilson,QB,20,4,false
@@ -173,9 +169,9 @@ Team HGH,David Johnson,RB,1,1,false
 Team HGH,Duke Johnson,RB,1,1,false
 Team HGH,Mike Evans,WR,28,3,false
 Team HGH,Jordan Matthews,WR,9,3,false
-Team HGH,Doug Baldwin,WR,6,,false
-Team HGH,Allen Hurns,WR,3,,false
+Team HGH,Doug Baldwin,WR,6,1,false
+Team HGH,Allen Hurns,WR,3,3,false
 Team HGH,Devin Funchess,WR,2,2,false
-Team HGH,Tyler Lockett,WR,1,1,false
 Team HGH,Philip Dorsett,WR,1,2,false
-Team HGH,Antonio Gates,TE,2,,false
+Team HGH,Tyler Lockett,WR,1,1,false
+Team HGH,Antonio Gates,TE,2,1,false

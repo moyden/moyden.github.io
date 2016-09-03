@@ -31,7 +31,13 @@
 		$("section.title").click(function(){
 			$( this ).toggleClass( "open" );
 		})
+    
+    $('tr.qb').last().after('<tr class="emptyrow"><td></td><td></td><td></td><td></td></tr>');
+    $('tr.rb').last().after('<tr class="emptyrow"><td></td><td></td><td></td><td></td></tr>');
+    $('tr.wr').last().after('<tr class="emptyrow"><td></td><td></td><td></td><td></td></tr>');
 	});
+  
+  
 	
 </script>
 
@@ -129,25 +135,25 @@
       
 		
       
-      <tr>
+      <tr class="qb">
         <td class="pos"><span class="qb">QB</span></td>
         <td class="player">Derek Carr</td>
         <td class="dollar">6</td>
-        <td class="year"></td>
+        <td class="year">1</td>
       </tr>
       
 		
       
-      <tr>
+      <tr class="qb">
         <td class="pos"><span class="qb">QB</span></td>
         <td class="player">Carson Palmer</td>
         <td class="dollar">4</td>
-        <td class="year"></td>
+        <td class="year">1</td>
       </tr>
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">LeSean McCoy</td>
         <td class="dollar">25</td>
@@ -156,7 +162,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Melvin Gordon</td>
         <td class="dollar">16</td>
@@ -165,38 +171,38 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Jeremy Langford</td>
         <td class="dollar">13</td>
-        <td class="year"></td>
+        <td class="year">1</td>
       </tr>
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Thomas Rawls</td>
         <td class="dollar">9</td>
-        <td class="year"></td>
+        <td class="year">3</td>
       </tr>
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Matt Jones</td>
         <td class="dollar">4</td>
-        <td class="year"></td>
+        <td class="year">2</td>
       </tr>
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Giovani Bernard</td>
         <td class="dollar">2</td>
-        <td class="year"></td>
+        <td class="year">3</td>
       </tr>
       
 		
@@ -205,7 +211,7 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Sammy Watkins</td>
         <td class="dollar">21</td>
@@ -214,16 +220,16 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Brandon Marshall</td>
         <td class="dollar">18</td>
-        <td class="year"></td>
+        <td class="year">1</td>
       </tr>
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Davante Adams</td>
         <td class="dollar">12</td>
@@ -232,16 +238,16 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Demaryius Thomas</td>
         <td class="dollar">10</td>
-        <td class="year"></td>
+        <td class="year">2</td>
       </tr>
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Jordy Nelson</td>
         <td class="dollar">9</td>
@@ -250,34 +256,16 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Eric Decker</td>
         <td class="dollar">7</td>
-        <td class="year"></td>
-      </tr>
-      
-		
-      
-      <tr>
-        <td class="pos"><span class="wr">WR</span></td>
-        <td class="player">Breshad Perriman</td>
-        <td class="dollar">3</td>
-        <td class="year">1</td>
-      </tr>
-      
-		
-      
-      <tr>
-        <td class="pos"><span class="wr">WR</span></td>
-        <td class="player">Allen Robinson</td>
-        <td class="dollar">3</td>
         <td class="year">2</td>
       </tr>
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Kevin White</td>
         <td class="dollar">3</td>
@@ -286,7 +274,16 @@
       
 		
       
-      <tr>
+      <tr class="wr">
+        <td class="pos"><span class="wr">WR</span></td>
+        <td class="player">Allen Robinson</td>
+        <td class="dollar">3</td>
+        <td class="year">2</td>
+      </tr>
+      
+		
+      
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">John Brown</td>
         <td class="dollar">3</td>
@@ -295,7 +292,16 @@
       
 		
       
-      <tr>
+      <tr class="wr">
+        <td class="pos"><span class="wr">WR</span></td>
+        <td class="player">Breshad Perriman</td>
+        <td class="dollar">3</td>
+        <td class="year">1</td>
+      </tr>
+      
+		
+      
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Marvin Jones</td>
         <td class="dollar">1</td>
@@ -306,11 +312,11 @@
       
 		
       
-      <tr>
+      <tr class="te">
         <td class="pos"><span class="te">TE</span></td>
         <td class="player">Eric Ebron</td>
         <td class="dollar">1</td>
-        <td class="year"></td>
+        <td class="year">2</td>
       </tr>
       
 		
@@ -318,7 +324,7 @@
 			<td class="total"></td>
 			<td class="total" id="player-total">Total:</td>
 			<td class="total dollar">170</td>
-			<td class="total year">22</td>
+			<td class="total year">40</td>
 		</tr>
 	</table>
 </section>
@@ -426,7 +432,7 @@
 </div>
 
 		<footer>
-  <p>Updated: 31/08/2016</p>
+  <p>Updated: 03/09/2016</p>
   <p><a href="/dynasty/data.csv" download="data.csv">Download all player data as CSV</a></p>
 </footer>
 		

@@ -215,6 +215,9 @@ span.wr {
 span.te {
   background-color: #f39c12; }
 
+.emptyrow {
+  height: 0.7em; }
+
 footer {
   width: 100%;
   text-align: center;

@@ -31,7 +31,13 @@
 		$("section.title").click(function(){
 			$( this ).toggleClass( "open" );
 		})
+    
+    $('tr.qb').last().after('<tr class="emptyrow"><td></td><td></td><td></td><td></td></tr>');
+    $('tr.rb').last().after('<tr class="emptyrow"><td></td><td></td><td></td><td></td></tr>');
+    $('tr.wr').last().after('<tr class="emptyrow"><td></td><td></td><td></td><td></td></tr>');
 	});
+  
+  
 	
 </script>
 
@@ -127,7 +133,7 @@
 		</tr>
 		
       
-      <tr>
+      <tr class="qb">
         <td class="pos"><span class="qb">QB</span></td>
         <td class="player">Russell Wilson</td>
         <td class="dollar">20</td>
@@ -136,7 +142,7 @@
       
 		
       
-      <tr>
+      <tr class="qb">
         <td class="pos"><span class="qb">QB</span></td>
         <td class="player">Teddy Bridgewater</td>
         <td class="dollar">2</td>
@@ -145,7 +151,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Adrian Peterson</td>
         <td class="dollar">48</td>
@@ -154,7 +160,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Jeremy Hill</td>
         <td class="dollar">33</td>
@@ -163,7 +169,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Latavius Murray</td>
         <td class="dollar">15</td>
@@ -172,7 +178,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Carlos Hyde</td>
         <td class="dollar">14</td>
@@ -181,7 +187,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">T.J. Yeldon</td>
         <td class="dollar">7</td>
@@ -190,7 +196,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Doug Martin</td>
         <td class="dollar">3</td>
@@ -199,7 +205,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Tevin Coleman</td>
         <td class="dollar">2</td>
@@ -208,7 +214,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Isaiah Crowell</td>
         <td class="dollar">2</td>
@@ -217,7 +223,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">David Johnson</td>
         <td class="dollar">1</td>
@@ -226,7 +232,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Duke Johnson</td>
         <td class="dollar">1</td>
@@ -235,7 +241,7 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Mike Evans</td>
         <td class="dollar">28</td>
@@ -244,7 +250,7 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Jordan Matthews</td>
         <td class="dollar">9</td>
@@ -253,25 +259,25 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Doug Baldwin</td>
         <td class="dollar">6</td>
-        <td class="year"></td>
+        <td class="year">1</td>
       </tr>
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Allen Hurns</td>
         <td class="dollar">3</td>
-        <td class="year"></td>
+        <td class="year">3</td>
       </tr>
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Devin Funchess</td>
         <td class="dollar">2</td>
@@ -280,16 +286,7 @@
       
 		
       
-      <tr>
-        <td class="pos"><span class="wr">WR</span></td>
-        <td class="player">Tyler Lockett</td>
-        <td class="dollar">1</td>
-        <td class="year">1</td>
-      </tr>
-      
-		
-      
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Philip Dorsett</td>
         <td class="dollar">1</td>
@@ -298,11 +295,20 @@
       
 		
       
-      <tr>
+      <tr class="wr">
+        <td class="pos"><span class="wr">WR</span></td>
+        <td class="player">Tyler Lockett</td>
+        <td class="dollar">1</td>
+        <td class="year">1</td>
+      </tr>
+      
+		
+      
+      <tr class="te">
         <td class="pos"><span class="te">TE</span></td>
         <td class="player">Antonio Gates</td>
         <td class="dollar">2</td>
-        <td class="year"></td>
+        <td class="year">1</td>
       </tr>
       
 		
@@ -310,7 +316,7 @@
 			<td class="total"></td>
 			<td class="total" id="player-total">Total:</td>
 			<td class="total dollar">200</td>
-			<td class="total year">30</td>
+			<td class="total year">35</td>
 		</tr>
 	</table>
 </section>
@@ -382,7 +388,7 @@
 </div>
 
 		<footer>
-  <p>Updated: 31/08/2016</p>
+  <p>Updated: 03/09/2016</p>
   <p><a href="/dynasty/data.csv" download="data.csv">Download all player data as CSV</a></p>
 </footer>
 		

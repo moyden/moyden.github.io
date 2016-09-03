@@ -31,7 +31,13 @@
 		$("section.title").click(function(){
 			$( this ).toggleClass( "open" );
 		})
+    
+    $('tr.qb').last().after('<tr class="emptyrow"><td></td><td></td><td></td><td></td></tr>');
+    $('tr.rb').last().after('<tr class="emptyrow"><td></td><td></td><td></td><td></td></tr>');
+    $('tr.wr').last().after('<tr class="emptyrow"><td></td><td></td><td></td><td></td></tr>');
 	});
+  
+  
 	
 </script>
 
@@ -131,16 +137,16 @@
       
 		
       
-      <tr>
+      <tr class="qb">
         <td class="pos"><span class="qb">QB</span></td>
         <td class="player">Blake Bortles</td>
         <td class="dollar">3</td>
-        <td class="year"></td>
+        <td class="year">5</td>
       </tr>
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Le'Veon Bell</td>
         <td class="dollar">59</td>
@@ -149,7 +155,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Jamaal Charles</td>
         <td class="dollar">59</td>
@@ -158,7 +164,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Arian Foster</td>
         <td class="dollar">10</td>
@@ -167,7 +173,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">LeGarrette Blount</td>
         <td class="dollar">5</td>
@@ -176,11 +182,11 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Dion Lewis</td>
         <td class="dollar">3</td>
-        <td class="year"></td>
+        <td class="year">3</td>
       </tr>
       
 		
@@ -189,7 +195,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Denard Robinson</td>
         <td class="dollar">1</td>
@@ -198,7 +204,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Cameron Artis-Payne</td>
         <td class="dollar">1</td>
@@ -207,7 +213,7 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Julian Edelman</td>
         <td class="dollar">17</td>
@@ -216,7 +222,7 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Brandin Cooks</td>
         <td class="dollar">15</td>
@@ -225,7 +231,7 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Nelson Agholor</td>
         <td class="dollar">4</td>
@@ -234,18 +240,27 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Sterling Shepherd</td>
         <td class="dollar">3</td>
-        <td class="year"></td>
+        <td class="year">5</td>
       </tr>
       
 		
       
 		
       
-      <tr>
+      <tr class="wr">
+        <td class="pos"><span class="wr">WR</span></td>
+        <td class="player">Markus Wheaton</td>
+        <td class="dollar">1</td>
+        <td class="year">3</td>
+      </tr>
+      
+		
+      
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Torrey Smith</td>
         <td class="dollar">1</td>
@@ -254,34 +269,25 @@
       
 		
       
-      <tr>
-        <td class="pos"><span class="wr">WR</span></td>
-        <td class="player">Markus Wheaton</td>
-        <td class="dollar">1</td>
-        <td class="year"></td>
-      </tr>
-      
-		
-      
-      <tr>
-        <td class="pos"><span class="te">TE</span></td>
-        <td class="player">Gary Barnidge</td>
-        <td class="dollar">2</td>
-        <td class="year"></td>
-      </tr>
-      
-		
-      
-      <tr>
+      <tr class="te">
         <td class="pos"><span class="te">TE</span></td>
         <td class="player">Coby Fleener</td>
         <td class="dollar">2</td>
-        <td class="year"></td>
+        <td class="year">4</td>
       </tr>
       
 		
       
-      <tr>
+      <tr class="te">
+        <td class="pos"><span class="te">TE</span></td>
+        <td class="player">Gary Barnidge</td>
+        <td class="dollar">2</td>
+        <td class="year">3</td>
+      </tr>
+      
+		
+      
+      <tr class="te">
         <td class="pos"><span class="te">TE</span></td>
         <td class="player">Richard Rodgers</td>
         <td class="dollar">1</td>
@@ -293,7 +299,7 @@
 			<td class="total"></td>
 			<td class="total" id="player-total">Total:</td>
 			<td class="total dollar">187</td>
-			<td class="total year">25</td>
+			<td class="total year">48</td>
 		</tr>
 	</table>
 </section>
@@ -310,8 +316,8 @@
       
       <tr>
         <td class="pos"><span class="qb">QB</span></td>
-        <td class="player">Nick Foles</td>
-        <td class="dollar">1</td>
+        <td class="player">Peyton Manning</td>
+        <td class="dollar">15</td>
         <td class="year">1</td>
       </tr>
       
@@ -319,8 +325,8 @@
       
       <tr>
         <td class="pos"><span class="qb">QB</span></td>
-        <td class="player">Peyton Manning</td>
-        <td class="dollar">15</td>
+        <td class="player">Nick Foles</td>
+        <td class="dollar">1</td>
         <td class="year">1</td>
       </tr>
       
@@ -404,7 +410,7 @@
 </div>
 
 		<footer>
-  <p>Updated: 31/08/2016</p>
+  <p>Updated: 03/09/2016</p>
   <p><a href="/dynasty/data.csv" download="data.csv">Download all player data as CSV</a></p>
 </footer>
 		

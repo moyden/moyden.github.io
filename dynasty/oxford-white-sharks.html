@@ -31,7 +31,13 @@
 		$("section.title").click(function(){
 			$( this ).toggleClass( "open" );
 		})
+    
+    $('tr.qb').last().after('<tr class="emptyrow"><td></td><td></td><td></td><td></td></tr>');
+    $('tr.rb').last().after('<tr class="emptyrow"><td></td><td></td><td></td><td></td></tr>');
+    $('tr.wr').last().after('<tr class="emptyrow"><td></td><td></td><td></td><td></td></tr>');
 	});
+  
+  
 	
 </script>
 
@@ -110,8 +116,8 @@
 <section class="capinfo">
 	<ul class="team-cap">
 		<li><span class="value">$ 200</span> <br /> Salary Cap</li>
-		<li><span class="value">$ 197</span> <br /> Cap Hit</li>
-		<li><span class="value">$ 3</span> <br /> Cap Space</li>
+		<li><span class="value">$ 196</span> <br /> Cap Hit</li>
+		<li><span class="value">$ 4</span> <br /> Cap Space</li>
 	</ul>
 </section>
 
@@ -127,7 +133,7 @@
 		</tr>
 		
       
-      <tr>
+      <tr class="qb">
         <td class="pos"><span class="qb">QB</span></td>
         <td class="player">Ryan Tannehill</td>
         <td class="dollar">3</td>
@@ -136,36 +142,36 @@
       
 		
       
-      <tr>
+      <tr class="qb">
         <td class="pos"><span class="qb">QB</span></td>
         <td class="player">Tyrod Taylor</td>
         <td class="dollar">2</td>
-        <td class="year"></td>
+        <td class="year">1</td>
       </tr>
       
 		
       
 		
       
-      <tr>
+      <tr class="qb">
         <td class="pos"><span class="qb">QB</span></td>
         <td class="player">Philip Rivers</td>
         <td class="dollar">1</td>
-        <td class="year"></td>
+        <td class="year">1</td>
       </tr>
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Ezekiel Elliot</td>
         <td class="dollar">37</td>
-        <td class="year"></td>
+        <td class="year">4</td>
       </tr>
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Todd Gurley</td>
         <td class="dollar">30</td>
@@ -174,7 +180,7 @@
       
 		
       
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Lamar Miller</td>
         <td class="dollar">16</td>
@@ -183,7 +189,16 @@
       
 		
       
-      <tr>
+      <tr class="rb">
+        <td class="pos"><span class="rb">RB</span></td>
+        <td class="player">Devontae Booker</td>
+        <td class="dollar">1</td>
+        <td class="year">3</td>
+      </tr>
+      
+		
+      
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Jerick McKinnon</td>
         <td class="dollar">1</td>
@@ -192,25 +207,16 @@
       
 		
       
-      <tr>
-        <td class="pos"><span class="rb">RB</span></td>
-        <td class="player">Devontae Booker</td>
-        <td class="dollar">1</td>
-        <td class="year"></td>
-      </tr>
-      
-		
-      
-      <tr>
+      <tr class="rb">
         <td class="pos"><span class="rb">RB</span></td>
         <td class="player">Spencer Ware</td>
         <td class="dollar">1</td>
-        <td class="year"></td>
+        <td class="year">2</td>
       </tr>
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Julio Jones</td>
         <td class="dollar">35</td>
@@ -219,7 +225,7 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">A.J. Green</td>
         <td class="dollar">20</td>
@@ -228,7 +234,7 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Emmanuel Sanders</td>
         <td class="dollar">19</td>
@@ -237,7 +243,7 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Amari Cooper</td>
         <td class="dollar">11</td>
@@ -246,16 +252,16 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Donte Moncrief</td>
         <td class="dollar">5</td>
-        <td class="year"></td>
+        <td class="year">2</td>
       </tr>
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Martavis Bryant</td>
         <td class="dollar">4</td>
@@ -264,7 +270,7 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Jaelen Strong</td>
         <td class="dollar">1</td>
@@ -273,25 +279,16 @@
       
 		
       
-      <tr>
+      <tr class="wr">
         <td class="pos"><span class="wr">WR</span></td>
         <td class="player">Travis Benjamin</td>
         <td class="dollar">1</td>
-        <td class="year"></td>
+        <td class="year">1</td>
       </tr>
       
 		
       
-      <tr>
-        <td class="pos"><span class="wr">WR</span></td>
-        <td class="player">Mohamed Sanu</td>
-        <td class="dollar">1</td>
-        <td class="year"></td>
-      </tr>
-      
-		
-      
-      <tr>
+      <tr class="te">
         <td class="pos"><span class="te">TE</span></td>
         <td class="player">Greg Olsen</td>
         <td class="dollar">6</td>
@@ -300,7 +297,7 @@
       
 		
       
-      <tr>
+      <tr class="te">
         <td class="pos"><span class="te">TE</span></td>
         <td class="player">Tyler Eifert</td>
         <td class="dollar">1</td>
@@ -311,8 +308,8 @@
 		<tr>
 			<td class="total"></td>
 			<td class="total" id="player-total">Total:</td>
-			<td class="total dollar">196</td>
-			<td class="total year">30</td>
+			<td class="total dollar">195</td>
+			<td class="total year">44</td>
 		</tr>
 	</table>
 </section>
@@ -373,8 +370,6 @@
 		
       
 		
-      
-		
 		<tr>
 			<td class="total"></td>
 			<td class="total" id="player-total">Total:</td>
@@ -393,7 +388,7 @@
 </div>
 
 		<footer>
-  <p>Updated: 31/08/2016</p>
+  <p>Updated: 03/09/2016</p>
   <p><a href="/dynasty/data.csv" download="data.csv">Download all player data as CSV</a></p>
 </footer>
 		
