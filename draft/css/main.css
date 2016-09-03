@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 8pt;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+section {
+  width: 23%;
+  margin-bottom: 4em; }
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  margin: auto;
+  cursor: pointer;
+  position: relative;
+  left: 1.35em; }
+
+table th.rank {
+  width: 2.5em;
+  text-align: center; }
+
+table th.pos {
+  width: 3.5em;
+  text-align: center;
+  position: relative;
+  left: -1.4em; }
+
+table th.name {
+  text-align: left; }
+
+table td.rank {
+  text-align: center; }
+
+table td,
+table th {
+  position: relative;
+  left: -1.2em; }
+
+table td.pos {
+  text-align: center; }
+
+table td.rank, table td.name {
+  position: relative;
+  top: 0.05em; }
+
+table td, table th {
+  padding: 0.25em 0em; }
+
+table td.name {
+  padding-left: 0.3em;
+  white-space: nowrap;
+  overflow: hidden; }
+
+table tr.empty {
+  color: #bbb;
+  border-left: 1px solid #ddd;
+  font-size: 1.6em; }
+
+table tr.player.dr {
+  color: #ccc; }
+
+table tr.player.dr span.team {
+  opacity: 0.15; }
+
+table tr.player.own td.name:after {
+  content: "\2605";
+  color: #f39c12; }
+
+table tr.player.own td.name span {
+  display: inline-block;
+  background-color: #555;
+  color: white;
+  position: relative;
+  top: 0em;
+  left: -0.3em;
+  padding: 0em 0.4em 0em 0.4em;
+  margin-bottom: 0em;
+  border-radius: 0.2em;
+  line-height: 1.5em; }
+
+hr {
+  position: relative;
+  top: 2.5em;
+  border: 0;
+  border-bottom: 1px solid #ddd; }
+
+span.team {
+  display: inline-block;
+  width: 3.5em;
+  color: white;
+  position: relative;
+  top: -0.1em;
+  left: -0.3em;
+  padding: 0.1em 0.4em 0em 0.4em;
+  margin-bottom: 0em;
+  border-radius: 0.2em;
+  font-size: 0.8em;
+  line-height: 1.5em; }
+
+span.qb {
+  background-color: #e74c3c; }
+
+span.rb {
+  background-color: #3498db; }
+
+span.wr {
+  background-color: #27ae60; }
+
+span.te {
+  background-color: #f39c12; }
+
+@media only screen and (min-width: 1000px) {
+  body {
+    font-size: 10pt; }
+
+  span.team {
+    top: 0; } }
+span.ne {
+  background-color: #223c83;
+  border-bottom: 0.2em solid #223c83; }
+
+span.mia {
+  background-color: #008e97;
+  border-bottom: 0.2em solid #ed9547; }
+
+span.nyj {
+  background-color: #16452d;
+  border-bottom: 0.2em solid #16452d; }
+
+span.buf {
+  background-color: #194b8c;
+  border-bottom: 0.2em solid #da2128; }
+
+span.bal {
+  background-color: #31196b;
+  border-bottom: 0.2em solid #31196b; }
+
+span.cin {
+  background-color: #f27200;
+  border-bottom: 0.2em solid #000000; }
+
+span.pit {
+  background-color: #000000;
+  border-bottom: 0.2em solid #ffb612; }
+
+span.cle {
+  background-color: #3d210c;
+  border-bottom: 0.2em solid #f16522; }
+
+span.hou {
+  background-color: #94072d;
+  border-bottom: 0.2em solid #03172d; }
+
+span.ind {
+  background-color: #003c75;
+  border-bottom: 0.2em solid #003c75; }
+
+span.ten {
+  background-color: #6395bf;
+  border-bottom: 0.2em solid #6395bf; }
+
+span.jac {
+  background-color: #9a752b;
+  border-bottom: 0.2em solid #0e4a57; }
+
+span.den {
+  background-color: #f26522;
+  border-bottom: 0.2em solid #2266aa; }
+
+span.sd {
+  background-color: #007ec4;
+  border-bottom: 0.2em solid #fdc00e; }
+
+span.oak {
+  background-color: #000000;
+  border-bottom: 0.2em solid #9ba1a6; }
+
+span.kc {
+  background-color: #bf0223;
+  border-bottom: 0.2em solid #bf0223; }
+
+span.was {
+  background-color: #79002e;
+  border-bottom: 0.2em solid #e0b900; }
+
+span.nyg {
+  background-color: #003d7e;
+  border-bottom: 0.2em solid #c9243f; }
+
+span.dal {
+  background-color: #00295b;
+  border-bottom: 0.2em solid #00295b; }
+
+span.phi {
+  background-color: #004149;
+  border-bottom: 0.2em solid #004149; }
+
+span.gb {
+  background-color: #003b2a;
+  border-bottom: 0.2em solid #ffc20e; }
+
+span.min {
+  background-color: #4e2683;
+  border-bottom: 0.2em solid #fbc42e; }
+
+span.chi {
+  background-color: #061e3e;
+  border-bottom: 0.2em solid #f16522; }
+
+span.det {
+  background-color: #0069b3;
+  border-bottom: 0.2em solid #0069b3; }
+
+span.atl {
+  background-color: #c9243f;
+  border-bottom: 0.2em solid #000000; }
+
+span.car {
+  background-color: #000000;
+  border-bottom: 0.2em solid #0097cc; }
+
+span.no {
+  background-color: #9e8857;
+  border-bottom: 0.2em solid #000000; }
+
+span.tb {
+  background-color: #bf093a;
+  border-bottom: 0.2em solid #bf093a; }
+
+span.sf {
+  background-color: #c6233e;
+  border-bottom: 0.2em solid #c8aa76; }
+
+span.sea {
+  background-color: #002858;
+  border-bottom: 0.2em solid #80ba5e; }
+
+span.la {
+  background-color: #001945;
+  border-bottom: 0.2em solid #c8aa76; }
+
+span.ari {
+  background-color: #9a0533;
+  border-bottom: 0.2em solid #ffc20e; }
