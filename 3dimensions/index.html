@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3 Testing</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style>
+      body {
+        background-color: #00001a;
+        animation: animation 1s steps(2, start) infinite;
+        margin: 0;
+        padding: 2em;
+      }
+      
+      img {
+        margin: 0;
+        padding: 0;
+        display: block;
+        height: 500px;
+      }
+      
+      .mask {
+        height: 500px;
+        overflow: hidden;
+        display: inline-block;
+      }
+      
+      .holder {
+        display: inline-block;
+        position: relative;
+        top: 0px;
+        animation: instant 0.6s steps(6, end) infinite;
+      }
+      
+      .holder:hover {
+      }
+      
+      @keyframes instant {
+        to {
+          top: -3000px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mask">
+      <div class="holder">
+        <img src="jeff/5.png" />
+        <img src="jeff/6.png" />
+        <img src="jeff/7.png" />
+        <img src="jeff/8.png" />
+        <img src="jeff/7.png" />
+        <img src="jeff/6.png" />
+      </div>
+    </div>
+  </body>
+</html>
