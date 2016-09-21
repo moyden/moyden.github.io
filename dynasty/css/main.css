@@ -91,12 +91,15 @@ svg#down-arrow {
   position: relative;
   top: 0.15em; }
 
-svg#trophy {
+svg#trophy, svg#medal {
   width: 1.5em;
   margin-right: 0.2em;
   position: relative;
   top: 0.3em;
   fill: #f39c12; }
+
+svg#medal {
+  fill: #e74c3c; }
 
 h2 {
   width: 100%;
