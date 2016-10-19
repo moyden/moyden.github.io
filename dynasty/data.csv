@@ -102,13 +102,15 @@ Jamaal About That Base,Kamar Aiken,WR,1,1,true
 Jamaal About That Base,Rob Gronkowski,TE,41,4,false
 Jamaal About That Base,Jason Witten,TE,1,1,false
 LOL Boys,Cam Newton,QB,3,1,false
+LOL Boys,Dak Prescott,QB,2,1,false
 LOL Boys,Jameis Winston,QB,1,3,false
-LOL Boys,Alex Smith,QB,1,1,false
+LOL Boys,Alex Smith,QB,1,1,true
+LOL Boys,Andy Dalton,QB,1,1,false
 LOL Boys,C.J. Anderson,RB,41,1,true
 LOL Boys,Matt Forte,RB,30,1,false
 LOL Boys,Justin Forsett,RB,13,1,true
 LOL Boys,Ryan Mathews,RB,7,1,false
-LOL Boys,Rashad Jennings,RB,4,1,false
+LOL Boys,Rashad Jennings,RB,4,1,true
 LOL Boys,Bilal Powell,RB,2,1,false
 LOL Boys,Terrance West,RB,1,1,false
 LOL Boys,DeAndre Washington,RB,1,1,false
@@ -116,6 +118,7 @@ LOL Boys,Antonio Brown,WR,49,3,false
 LOL Boys,Alshon Jeffery,WR,26,3,false
 LOL Boys,Jarvis Landry,WR,6,2,false
 LOL Boys,Josh Gordon,WR,3,2,true
+LOL Boys,Cameron Meredith,WR,3,1,false
 LOL Boys,Jeremy Maclin,WR,2,1,false
 LOL Boys,Dorial Green-Beckham,WR,2,2,true
 LOL Boys,Charles Johnson,WR,2,1,true
@@ -150,10 +153,11 @@ London Lizards,Vincent Jackson,WR,2,1,false
 London Lizards,Steve Smith Sr.,WR,1,1,true
 London Lizards,Victor Cruz,WR,1,1,false
 London Lizards,Mike Wallace,WR,1,1,false
+London Lizards,Cole Beasley,WR,1,1,false
 London Lizards,Jordan Cameron,TE,5,1,true
 London Lizards,Jimmy Graham,TE,2,1,false
 London Lizards,Zach Ertz,TE,1,4,false
-Oxford White Sharks,Ryan Tannehill,QB,3,2,false
+Oxford White Sharks,Ryan Tannehill,QB,3,2,true
 Oxford White Sharks,Tyrod Taylor,QB,2,1,false
 Oxford White Sharks,Sam Bradford,QB,1,2,true
 Oxford White Sharks,Philip Rivers,QB,1,1,false
@@ -173,6 +177,7 @@ Oxford White Sharks,Martavis Bryant,WR,4,4,false
 Oxford White Sharks,Jaelen Strong,WR,1,3,false
 Oxford White Sharks,Travis Benjamin,WR,1,1,false
 Oxford White Sharks,Greg Olsen,TE,6,1,false
+Oxford White Sharks,Hunter Henry,TE,2,1,false
 Oxford White Sharks,Tyler Eifert,TE,1,2,false
 Team HGH,Russell Wilson,QB,20,4,false
 Team HGH,Teddy Bridgewater,QB,2,2,false
