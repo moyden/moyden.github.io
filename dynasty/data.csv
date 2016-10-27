@@ -58,12 +58,13 @@ Dynasty Warriors II,Andrew Luck,QB,36,4,false
 Dynasty Warriors II,Aaron Rodgers,QB,16,1,false
 Dynasty Warriors II,Ameer Abdullah,RB,12,4,false
 Dynasty Warriors II,Bishop Sankey,RB,2,1,true
+Dynasty Warriors II,Jacquizz Rodgers,RB,2,1,false
 Dynasty Warriors II,Tre Mason,RB,1,1,true
-Dynasty Warriors II,Charles Sims,RB,1,1,false
+Dynasty Warriors II,Charles Sims,RB,1,1,true
 Dynasty Warriors II,Danny Woodhead,RB,1,1,true
 Dynasty Warriors II,DeAngelo Williams,RB,1,1,false
 Dynasty Warriors II,Theo Riddick,RB,1,1,false
-Dynasty Warriors II,Justin Forsett,RB,1,1,false
+Dynasty Warriors II,Justin Forsett,RB,1,1,true
 Dynasty Warriors II,Christine Michael,RB,1,1,false
 Dynasty Warriors II,Jay Ajayi,RB,1,1,false
 Dynasty Warriors II,Matt Asiata,RB,1,1,false
@@ -72,6 +73,7 @@ Dynasty Warriors II,Odell Beckham Jr.,WR,40,2,false
 Dynasty Warriors II,Michael Floyd,WR,3,5,false
 Dynasty Warriors II,Michael Crabtree,WR,2,3,false
 Dynasty Warriors II,Tavon Austin,WR,2,2,false
+Dynasty Warriors II,Ty Montgomery,WR,2,1,false
 Dynasty Warriors II,Kendall Wright,WR,1,2,true
 Dynasty Warriors II,Laquon Treadwell,WR,1,5,false
 Dynasty Warriors II,Roddy White,WR,1,1,true
@@ -105,7 +107,7 @@ LOL Boys,Cam Newton,QB,3,1,false
 LOL Boys,Dak Prescott,QB,2,1,false
 LOL Boys,Jameis Winston,QB,1,3,false
 LOL Boys,Alex Smith,QB,1,1,true
-LOL Boys,Andy Dalton,QB,1,1,false
+LOL Boys,Andy Dalton,QB,1,1,true
 LOL Boys,C.J. Anderson,RB,41,1,true
 LOL Boys,Matt Forte,RB,30,1,false
 LOL Boys,Justin Forsett,RB,13,1,true
@@ -127,6 +129,7 @@ LOL Boys,Kelvin Benjamin,WR,1,4,false
 LOL Boys,Tajae Sharpe,WR,1,4,false
 LOL Boys,Josh Doctson,WR,1,4,false
 LOL Boys,Corey Coleman,WR,1,4,false
+LOL Boys,Tyrell Williams,WR,1,4,false
 LOL Boys,Jordan Reed,TE,11,2,false
 LOL Boys,Travis Kelce,TE,8,3,false
 LOL Boys,Martellus Bennett,TE,1,1,false
@@ -174,7 +177,7 @@ Oxford White Sharks,Emmanuel Sanders,WR,19,1,false
 Oxford White Sharks,Amari Cooper,WR,11,4,false
 Oxford White Sharks,Donte Moncrief,WR,5,2,false
 Oxford White Sharks,Martavis Bryant,WR,4,4,false
-Oxford White Sharks,Jaelen Strong,WR,1,3,false
+Oxford White Sharks,Jaelen Strong,WR,1,3,true
 Oxford White Sharks,Travis Benjamin,WR,1,1,false
 Oxford White Sharks,Greg Olsen,TE,6,1,false
 Oxford White Sharks,Hunter Henry,TE,2,1,false
