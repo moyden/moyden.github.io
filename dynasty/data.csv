@@ -2,6 +2,7 @@ Team,Player,Position,Contract Value,Contract Length,Dropped
 Colorado Pony Hospital,Matthew Stafford,QB,2,1,true
 Colorado Pony Hospital,Derek Carr,QB,6,1,false
 Colorado Pony Hospital,Carson Palmer,QB,4,1,false
+Colorado Pony Hospital,Ryan Fitzpatrick,QB,1,1,false
 Colorado Pony Hospital,LeSean McCoy,RB,25,1,false
 Colorado Pony Hospital,Melvin Gordon,RB,16,3,false
 Colorado Pony Hospital,Jeremy Langford,RB,13,1,true
@@ -10,7 +11,7 @@ Colorado Pony Hospital,Matt Jones,RB,4,2,false
 Colorado Pony Hospital,Giovani Bernard,RB,2,3,false
 Colorado Pony Hospital,David Cobb,RB,2,3,true
 Colorado Pony Hospital,Ryan Mathews,RB,3,1,true
-Colorado Pony Hospital,Kenneth Dixon,RB,1,1,false
+Colorado Pony Hospital,Kenneth Dixon,RB,1,1,true
 Colorado Pony Hospital,Mike Gillislee,RB,1,1,false
 Colorado Pony Hospital,Sammy Watkins,WR,21,1,false
 Colorado Pony Hospital,Brandon Marshall,WR,18,1,false
@@ -43,7 +44,8 @@ Dillon Panthers,Darren McFadden,RB,1,1,true
 Dillon Panthers,Denard Robinson,RB,1,2,true
 Dillon Panthers,Cameron Artis-Payne,RB,1,2,false
 Dillon Panthers,Orleans Darkwa,RB,1,1,false
-Dillon Panthers,Arian Foster,RB,1,1,false
+Dillon Panthers,Arian Foster,RB,1,1,true
+Dillon Panthers,C. J. Prosise,RB,1,1,false
 Dillon Panthers,Julian Edelman,WR,17,3,false
 Dillon Panthers,Brandin Cooks,WR,15,4,false
 Dillon Panthers,Nelson Agholor,WR,4,3,false
@@ -51,6 +53,7 @@ Dillon Panthers,Sterling Shepherd,WR,3,5,false
 Dillon Panthers,Brian Quick,WR,1,1,true
 Dillon Panthers,Markus Wheaton,WR,1,3,false
 Dillon Panthers,Torrey Smith,WR,1,1,false
+Dillon Panthers,Jamison Crowder,WR,1,1,false
 Dillon Panthers,Coby Fleener,TE,2,4,false
 Dillon Panthers,Gary Barnidge,TE,2,3,false
 Dillon Panthers,Richard Rodgers,TE,1,2,false
@@ -58,7 +61,8 @@ Dynasty Warriors II,Andrew Luck,QB,36,4,false
 Dynasty Warriors II,Aaron Rodgers,QB,16,1,false
 Dynasty Warriors II,Ameer Abdullah,RB,12,4,false
 Dynasty Warriors II,Bishop Sankey,RB,2,1,true
-Dynasty Warriors II,Jacquizz Rodgers,RB,2,1,false
+Dynasty Warriors II,Jacquizz Rodgers,RB,2,1,true
+Dynasty Warriors II,Tim Hightower,RB,2,1,false
 Dynasty Warriors II,Tre Mason,RB,1,1,true
 Dynasty Warriors II,Charles Sims,RB,1,1,true
 Dynasty Warriors II,Danny Woodhead,RB,1,1,true
@@ -152,7 +156,7 @@ London Lizards,DeAndre Hopkins,WR,23,3,false
 London Lizards,Keenan Allen,WR,13,2,false
 London Lizards,DeVante Parker,WR,4,2,false
 London Lizards,DeSean Jackson,WR,3,1,false
-London Lizards,Vincent Jackson,WR,2,1,false
+London Lizards,Vincent Jackson,WR,2,1,true
 London Lizards,Steve Smith Sr.,WR,1,1,true
 London Lizards,Victor Cruz,WR,1,1,false
 London Lizards,Mike Wallace,WR,1,1,false
