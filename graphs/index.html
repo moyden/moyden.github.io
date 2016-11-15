@@ -13,21 +13,33 @@
   <body>
     <script>
       var focusing = false;
+      var num = 0;
       jQuery(function($) {
         $(".button").click(function() {
           var value = $(this).attr("value");
           if (focusing) {
-            if($("#" + value).hasClass("faded")) {
-              $(".series").addClass("faded");
-              $("#" + value).removeClass("faded");
-              focusing = true;
+            if (num > 1) {
+              if ($("#" + value).hasClass("faded")) {
+                $("#" + value).removeClass("faded");
+                num++;
+              } else {
+                $("#" + value).addClass("faded");
+                num--;
+              }
             } else {
-              $(".series").removeClass("faded");
-              focusing = false;
+              if ($("#" + value).hasClass("faded")) {
+                $("#" + value).removeClass("faded");
+                num++
+              } else {
+                $(".series").removeClass("faded");
+                num = 0;
+                focusing = false;
+              }
             }
           } else {
             $(".series").addClass("faded");
             $("#" + value).removeClass("faded");
+            num++;
             focusing = true;
           }
         });
