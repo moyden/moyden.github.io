@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C1K1 Power Ranks</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Lato:400">
+    <style>
+      body {
+        max-width: 1280px;
+        margin: auto;
+      }
+      svg {
+        width: 100%;
+      }
+      .line, .point {
+        stroke-width: 1.5;
+      }
+      .line {
+        fill: none;
+      }
+      .point {
+        fill: #fff;
+      }
+      section.controls {
+      }
+      section.graph {
+      }
+      section {
+      }
+      ul {
+        padding: 1em;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      li {
+        flex: 1 21%;
+        display: inline-block;
+        list-style: none;
+        font-family: 'Lato', sans-serif;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+        margin: 0.2em;
+        padding-top: 0.6em;
+        padding-bottom: 0.6em;
+        max-width: 7em;
+        border-radius: 0.4em;
+
+        -webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        li {
+          flex: 1 11%;
+          max-width: 6em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+      <ul class="toggles">
+      </ul>
+    <section class="graph">
+      <svg viewBox="0 0 600 200">
+        <line class="x-axis" x1="30" y1="0" x2="555" y2="0"
+            stroke-width="0.5" stroke="#ddd"
+            />
+        <line class="y-axis" x1="0" y1="10" x2="0" y2="290"
+            stroke-width="0.5" stroke="#ddd"
+            />
+      </svg>
+    </section>
+    <script>
+
+    var svg = d3.select("svg"),
+        margin = {top: 5, right: 5, bottom: 5, left: 5},
+        width = 600 - margin.left - margin.right,
+        height = 200 - margin.top - margin.bottom,
+        g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var colours = [
+                    "#3498DB",
+                    "#d95f02",
+                    "#66a61e",
+                    "#7570b3",
+                    "#e7298a",
+                    "#e6ab02",
+                    "#666666",
+                    "#a6761d"
+                  ]
+
+    var x = d3.scaleLinear().range([0, width]),
+        y = d3.scaleLinear().range([height, 0]),
+        z = d3.scaleOrdinal(colours);
+
+    var line = d3.line()
+        .curve(d3.curveMonotoneX)
+        .x(function(d) { return x(d.week); })
+        .y(function(d) { return y(d.rank); });
+
+    d3.csv("c1k1.csv", function(data) {
+
+      var teams = data.columns.slice(1).map(function(id) {
+        return {
+          id: id,
+          values: data.map(function(d) {
+            return {week: d.week, rank: +d[id]};
+          })
+        };
+      });
+
+      for (var i = 0; i < teams.length; i++) {
+        for (var j = teams[i].values.length - 1; j > -1 ; j--) {
+          var rollingSum = 0;
+          if (j > 0) { rollingSum += teams[i].values[j-1].rank; }
+          if (j > 1) { rollingSum += teams[i].values[j-2].rank; }
+          if (j > 2) { rollingSum += teams[i].values[j-3].rank; }
+            teams[i].values[j].rank = teams[i].values[j].rank + rollingSum;
+        }
+      }
+
+      for (var j = 0; j < teams[0].values.length; j++) {
+        var mean = d3.mean(teams, function(d) { return d.values[j].rank; });
+        for (var i = 0; i < teams.length; i++) {
+          teams[i].values[j].rank = teams[i].values[j].rank - mean;
+        }
+      }
+
+      teams = teams.sort(function(a,b) { return d3.descending(a.values[9].rank, b.values[9].rank); });
+
+      x.domain([0,16]);
+
+      y.domain([
+        d3.min(teams, function(c) { return d3.min(c.values, function(d) { return d.rank; }) }),
+        d3.max(teams, function(c) { return d3.max(c.values, function(d) { return d.rank; }) })
+      ]);
+
+      z.domain(teams.map(function(c) { return c.id; }));
+
+      svg.selectAll(".x-axis")
+          .attr("y1", y(0) + margin.top)
+          .attr("y2", y(0) + margin.top);
+
+      svg.selectAll(".y-axis")
+          .attr("x1", x(1) + margin.left)
+          .attr("x2", x(1) + margin.left);
+
+      var team = g.selectAll(".team")
+          .data(teams)
+          .enter().append("g")
+          .attr("class", function(d) {
+            return "team " + d.id;
+          });
+
+      team.append("path")
+          .attr("class", "line")
+          .attr("d", function(d) { return line(d.values); })
+          .style("stroke", function(d) { return z(d.id); });
+
+      team.append("g").selectAll(".point")
+          .data(function (d) { return d.values; })
+          .enter().append("circle")
+          .attr("class", "point")
+          .attr("cx", function(d) {
+            return x(d.week);
+          })
+          .attr("cy", function(d) {
+            return y(d.rank);
+          })
+          .attr("r", 1.5)
+          .style("stroke", function(d) { return z(this.parentNode.__data__.id); });
+
+
+      var list = d3.select("body").select("ul");
+
+      var focusing = false;
+      var numFocused = 0;
+
+      list.selectAll("li")
+          .data(teams)
+          .enter().append("li")
+          .text(function(d) {
+            return d.id;
+          })
+          .attr("value", function(d) {
+            return d.id;
+          })
+          .attr("class", function(d) {
+            return "button " + d.id;
+          })
+          .style("background-color", function(d) { return z(d.id); })
+          .on("click", function(d) {
+            var active = d.active ? false : true,
+            newOpacity = active ? 0.15 : 1;
+            d3.select("li." + d.id)
+              .transition().duration(250)
+              .style("opacity", 1.5 * newOpacity);
+            d3.select("g." + d.id)
+              .transition().duration(250)
+              .style("opacity", newOpacity);
+            d.active = active;
+          });
+
+    });
+
+    </script>
+  </body>
+</html>
