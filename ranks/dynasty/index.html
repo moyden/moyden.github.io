@@ -105,7 +105,7 @@
         .x(function(d) { return x(d.week); })
         .y(function(d) { return y(d.rank); });
 
-    d3.csv("c1k1.csv", function(data) {
+    d3.csv("dynasty.csv", function(data) {
 
       var teams = data.columns.slice(1).map(function(id) {
         return {
