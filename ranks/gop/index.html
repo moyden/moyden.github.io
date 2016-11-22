@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>C1K1 Power Ranks</title>
+    <title>GOP Power Ranks</title>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Lato:400">
@@ -105,7 +105,7 @@
         .x(function(d) { return x(d.week); })
         .y(function(d) { return y(d.rank); });
 
-    d3.csv("c1k1.csv", function(data) {
+    d3.csv("gop.csv", function(data) {
 
       var teams = data.columns.slice(1).map(function(id) {
         return {
