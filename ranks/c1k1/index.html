@@ -134,9 +134,9 @@
       }
 
       teams = teams.sort(function(a,b) {
-        return d3.descending(a.values[data.length-1].rank, b.values[data.length-1].rank);
+        return d3.descending(a.values[data.length - 1].rank, b.values[data.length-1].rank);
       });
-      
+
       x.domain([0,16]);
 
       y.domain([
