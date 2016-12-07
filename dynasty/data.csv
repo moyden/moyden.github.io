@@ -7,7 +7,7 @@ Colorado Pony Hospital,LeSean McCoy,RB,25,1,false
 Colorado Pony Hospital,Melvin Gordon,RB,16,3,false
 Colorado Pony Hospital,Jeremy Langford,RB,13,1,true
 Colorado Pony Hospital,Thomas Rawls,RB,9,3,false
-Colorado Pony Hospital,Matt Jones,RB,4,2,false
+Colorado Pony Hospital,Matt Jones,RB,4,2,true
 Colorado Pony Hospital,Giovani Bernard,RB,2,3,false
 Colorado Pony Hospital,David Cobb,RB,2,3,true
 Colorado Pony Hospital,Ryan Mathews,RB,3,1,true
@@ -18,6 +18,7 @@ Colorado Pony Hospital,Brandon Marshall,WR,18,1,false
 Colorado Pony Hospital,Davante Adams,WR,12,4,false
 Colorado Pony Hospital,Demaryius Thomas,WR,10,2,false
 Colorado Pony Hospital,Jordy Nelson,WR,9,3,false
+Colorado Pony Hospital,Randall Cobb,WR,9,2,false
 Colorado Pony Hospital,Eric Decker,WR,7,2,false
 Colorado Pony Hospital,Kevin White,WR,3,3,true
 Colorado Pony Hospital,Allen Robinson,WR,3,2,false
@@ -77,10 +78,11 @@ Dynasty Warriors II,Jay Ajayi,RB,1,1,false
 Dynasty Warriors II,Matt Asiata,RB,1,1,false
 Dynasty Warriors II,Dez Bryant,WR,49,2,false
 Dynasty Warriors II,Odell Beckham Jr.,WR,40,2,false
+Dynasty Warriors II,Tyreek Hill,WR,4,1,false
 Dynasty Warriors II,Michael Floyd,WR,3,5,false
 Dynasty Warriors II,Michael Crabtree,WR,2,3,false
 Dynasty Warriors II,Tavon Austin,WR,2,2,false
-Dynasty Warriors II,Ty Montgomery,WR,2,1,false
+Dynasty Warriors II,Ty Montgomery,WR,2,1,true
 Dynasty Warriors II,Kendall Wright,WR,1,2,true
 Dynasty Warriors II,Laquon Treadwell,WR,1,5,false
 Dynasty Warriors II,Roddy White,WR,1,1,true
@@ -103,7 +105,7 @@ Jamaal About That Base,Charcandrick West,RB,1,1,true
 Jamaal About That Base,Darren Sproles,RB,1,1,false
 Jamaal About That Base,James White,RB,1,1,false
 Jamaal About That Base,Jordan Howard,RB,1,1,false
-Jamaal About That Base,Randall Cobb,WR,35,4,false
+Jamaal About That Base,Randall Cobb,WR,35,4,true
 Jamaal About That Base,T.Y. Hilton,WR,29,2,false
 Jamaal About That Base,Golden Tate,WR,6,4,false
 Jamaal About That Base,Terrelle Pryor,WR,2,1,false
@@ -187,7 +189,7 @@ Oxford White Sharks,Amari Cooper,WR,11,4,false
 Oxford White Sharks,Donte Moncrief,WR,5,2,false
 Oxford White Sharks,Martavis Bryant,WR,4,4,false
 Oxford White Sharks,Jaelen Strong,WR,1,3,true
-Oxford White Sharks,Travis Benjamin,WR,1,1,false
+Oxford White Sharks,Travis Benjamin,WR,1,1,true
 Oxford White Sharks,Greg Olsen,TE,6,1,false
 Oxford White Sharks,Hunter Henry,TE,2,1,false
 Oxford White Sharks,Tyler Eifert,TE,1,2,false
