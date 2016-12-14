@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3 Testing</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style>
+      body {
+        max-width: 1280px;
+        background-color: #00001a;
+        animation: animation 1s steps(2, start) infinite;
+        margin: auto;
+        padding: 5em 2em 2em 2em;
+        white-space: nowrap;
+      }
+
+      img {
+        margin: 0;
+        padding: 0;
+        display: block;
+        height: 500px;
+      }
+
+      .mask {
+        height: 500px;
+        width: 420px;
+        overflow: hidden;
+        display: inline-block;
+        margin-right: 2em;
+      }
+
+      .holder {
+        display: inline-block;
+        position: relative;
+        top: 0px;
+      }
+
+      .holder:hover {
+        animation: instant 0.6s steps(6, end) infinite;
+      }
+
+      @keyframes instant {
+        to {
+          top: -3000px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mask">
+      <div class="holder">
+        <img src="wobbles/014/1.jpg" />
+        <img src="wobbles/014/2.jpg" />
+        <img src="wobbles/014/3.jpg" />
+        <img src="wobbles/014/4.jpg" />
+        <img src="wobbles/014/3.jpg" />
+        <img src="wobbles/014/2.jpg" />
+      </div>
+    </div>
+    <div class="mask">
+      <div class="holder">
+        <img src="wobbles/015/1.jpg" />
+        <img src="wobbles/015/2.jpg" />
+        <img src="wobbles/015/3.jpg" />
+        <img src="wobbles/015/4.jpg" />
+        <img src="wobbles/015/3.jpg" />
+        <img src="wobbles/015/2.jpg" />
+      </div>
+    </div>
+    <div class="mask">
+      <div class="holder">
+        <img src="wobbles/016/1.jpg" />
+        <img src="wobbles/016/2.jpg" />
+        <img src="wobbles/016/3.jpg" />
+        <img src="wobbles/016/4.jpg" />
+        <img src="wobbles/016/3.jpg" />
+        <img src="wobbles/016/2.jpg" />
+      </div>
+    </div>
+    <div class="mask">
+      <div class="holder">
+        <img src="wobbles/017/1.jpg" />
+        <img src="wobbles/017/2.jpg" />
+        <img src="wobbles/017/3.jpg" />
+        <img src="wobbles/017/4.jpg" />
+        <img src="wobbles/017/3.jpg" />
+        <img src="wobbles/017/2.jpg" />
+      </div>
+    </div>
+  </body>
+</html>
