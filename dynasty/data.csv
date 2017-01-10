@@ -33,8 +33,8 @@ Colorado Pony Hospital,Kyle Rudolph,TE,1,1,false
 Dillon Panthers,Peyton Manning,QB,15,1,true
 Dillon Panthers,Nick Foles,QB,1,1,true
 Dillon Panthers,Blake Bortles,QB,3,5,false
-Dillon Panthers,Brock Osweiler,QB,1,1,false
-Dillon Panthers,Carson Wentz,QB,1,1,false
+Dillon Panthers,Brock Osweiler,QB,1,1,true
+Dillon Panthers,Carson Wentz,QB,1,1,true
 Dillon Panthers,Le'Veon Bell,RB,59,4,false
 Dillon Panthers,Jamaal Charles,RB,59,2,false
 Dillon Panthers,Arian Foster,RB,10,1,true
@@ -44,7 +44,7 @@ Dillon Panthers,Knile Davis,RB,2,1,true
 Dillon Panthers,Darren McFadden,RB,1,1,true
 Dillon Panthers,Denard Robinson,RB,1,2,true
 Dillon Panthers,Cameron Artis-Payne,RB,1,2,false
-Dillon Panthers,Orleans Darkwa,RB,1,1,false
+Dillon Panthers,Orleans Darkwa,RB,1,1,true
 Dillon Panthers,Arian Foster,RB,1,1,true
 Dillon Panthers,C. J. Prosise,RB,1,1,false
 Dillon Panthers,Julian Edelman,WR,17,3,false
@@ -53,7 +53,7 @@ Dillon Panthers,Nelson Agholor,WR,4,3,false
 Dillon Panthers,Sterling Shepherd,WR,3,5,false
 Dillon Panthers,Brian Quick,WR,1,1,true
 Dillon Panthers,Markus Wheaton,WR,1,3,false
-Dillon Panthers,Torrey Smith,WR,1,1,false
+Dillon Panthers,Torrey Smith,WR,1,1,true
 Dillon Panthers,Jamison Crowder,WR,1,1,false
 Dillon Panthers,Rishard Matthews,WR,1,1,false
 Dillon Panthers,Coby Fleener,TE,2,4,false
@@ -64,6 +64,7 @@ Dynasty Warriors II,Aaron Rodgers,QB,16,1,false
 Dynasty Warriors II,Marcus Mariota,QB,2,1,false
 Dynasty Warriors II,Ameer Abdullah,RB,12,4,false
 Dynasty Warriors II,Robert Kelley,RB,4,1,false
+Dynasty Warriors II,Bilal Powell,RB,3,1,false
 Dynasty Warriors II,Bishop Sankey,RB,2,1,true
 Dynasty Warriors II,Jacquizz Rodgers,RB,2,1,true
 Dynasty Warriors II,Tim Hightower,RB,2,1,false
@@ -92,7 +93,7 @@ Dynasty Warriors II,Terrance Williams,WR,1,1,true
 Dynasty Warriors II,Larry Fitzgerald,WR,1,1,false
 Dynasty Warriors II,Will Fuller,WR,1,1,true
 Dynasty Warriors II,Delanie Walker,TE,1,1,false
-Dynasty Warriors II,Dennis Pitta,TE,1,1,false
+Dynasty Warriors II,Dennis Pitta,TE,1,1,true
 Jamaal About That Base,Tom Brady,QB,6,1,false
 Jamaal About That Base,Eli Manning,QB,1,3,false
 Jamaal About That Base,Eddie Lacy,RB,51,4,true
@@ -133,7 +134,7 @@ LOL Boys,Alshon Jeffery,WR,26,3,false
 LOL Boys,Jarvis Landry,WR,6,2,false
 LOL Boys,Josh Gordon,WR,3,2,true
 LOL Boys,Cameron Meredith,WR,3,1,false
-LOL Boys,Jeremy Maclin,WR,2,1,false
+LOL Boys,Jeremy Maclin,WR,2,1,true
 LOL Boys,Dorial Green-Beckham,WR,2,2,true
 LOL Boys,Charles Johnson,WR,2,1,true
 LOL Boys,Sammie Coates,WR,2,1,false
@@ -142,6 +143,7 @@ LOL Boys,Tajae Sharpe,WR,1,4,false
 LOL Boys,Josh Doctson,WR,1,4,false
 LOL Boys,Corey Coleman,WR,1,4,false
 LOL Boys,Tyrell Williams,WR,1,1,false
+LOL Boys,Ty Montgomery,WR,1,1,false
 LOL Boys,Jordan Reed,TE,11,2,false
 LOL Boys,Travis Kelce,TE,8,3,false
 LOL Boys,Martellus Bennett,TE,1,1,false
@@ -192,6 +194,7 @@ Oxford White Sharks,Donte Moncrief,WR,5,2,false
 Oxford White Sharks,Martavis Bryant,WR,4,4,false
 Oxford White Sharks,Jaelen Strong,WR,1,3,true
 Oxford White Sharks,Travis Benjamin,WR,1,1,true
+Oxford White Sharks,Robert Woods,WR,1,1,false
 Oxford White Sharks,Greg Olsen,TE,6,1,false
 Oxford White Sharks,Hunter Henry,TE,2,1,false
 Oxford White Sharks,Tyler Eifert,TE,1,2,false
