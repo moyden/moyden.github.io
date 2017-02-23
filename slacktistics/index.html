@@ -10,11 +10,12 @@ body {
   font-family: "Lato", Helvetica, Arial, sans-serif;
   width: 100vw;
   margin: auto;
+  background-color: #eee;
 }
 
 ul {
-  width: 80vw;
-  margin: 2em 10vw 1em 10vw;
+  width: 70vw;
+  margin: 2em 15vw 1em 15vw;
   list-style: none;
   display: flex;
   padding: 0;
@@ -30,28 +31,48 @@ svg {
   width: 80vw;
   height: 40vw;
   margin: 0 10vw;
-  border: 1px solid #ddd;
+}
+
+g.tick {
+  font-size: 0.8em;
+}
+
+g.labels {
+  stroke-width: 0;
+  font-family: "Lato";
+}
+
+g.noLabels {
+  stroke-width: 0.75;
+}
+
+g.noLabels text {
+  display: none;
 }
 
 </style>
 </head>
 <body>
   <ul>
-    <li style="color: #AF0014;">#general</li>
-    <li style="color: #245486;">#ameriball</li>
-    <li style="color: #368731;">#spoilers</li>
-    <li style="color: #652B6F;">#politics</li>
-    <li style="color: #CE5709;">#sports</li>
-    <li style="color: #EDBA10;">#florida</li>
-    <li style="color: #77371A;">#pokemon</li>
+    <li style="color: #a0292b;">#general</li>
+    <li style="color: #297099;">#ameriball</li>
+    <li style="color: #278e50;">#spoilers</li>
+    <li style="color: #e39712;">#politics</li>
+    <li style="color: #7e448d;">#sports</li>
+    <li style="color: #d35400;">#florida</li>
+    <li style="color: #34495e;">#pokemon</li>
   </ul>
 
-  <svg viewbox="0 0 800 400"></svg>
+  <svg viewbox="0 0 850 400"></svg>
 <script src="//d3js.org/d3.v4.min.js"></script>
 <script>
 
 d3.csv("c1k1-weeks.csv", function(data) {
 
+  var parseDate = d3.timeParse("%Y-%m-%d");
+  var dates = data.map(function(d) {
+    return parseDate(d.x);
+  });
 
   var n = 7, // number of layers
       m = 116, // number of samples per layer
@@ -62,17 +83,21 @@ d3.csv("c1k1-weeks.csv", function(data) {
       layers0 = stack(data);
 
   var colours = [
-                  "#AF0014",
-                  "#245486",
-                  "#368731",
-                  "#652B6F",
-                  "#CE5709",
-                  "#EDBA10",
-                  "#77371A"
+                  "#a0292b",
+                  "#297099",
+                  "#278e50",
+                  "#e39712",
+                  "#7e448d",
+                  "#d35400",
+                  "#34495e"
                 ]
 
   var width = 800,
-      height = 400;
+      height = 300;
+
+  var dx = d3.scaleTime()
+    .range([0, width])
+    .domain(d3.extent(dates));
 
   var x = d3.scaleLinear()
       .domain([0, m - 1])
@@ -100,11 +125,25 @@ d3.csv("c1k1-weeks.csv", function(data) {
 
   var svg = d3.select("body").select("svg");
 
-  svg.selectAll("path")
+  svg.append("g")
+      .attr("transform", "translate(25, -30)")
+    .selectAll("path")
       .data(layers0)
     .enter().append("path")
       .attr("d", area)
-      .style("fill", function() { return color(Math.random()); });
+      .style("fill", function(d, i) { return color(i); });
+
+  svg.append("g")
+    .attr("class", "labels")
+    .attr("transform", "translate(25, " + (height - 18) + ")")
+    .call(d3.axisBottom(dx)
+      .tickArguments([d3.timeMonth.every(3)]));
+
+  svg.append("g")
+    .attr("class", "noLabels")
+    .attr("transform", "translate(25, " + (height - 20) + ")")
+    .call(d3.axisBottom(dx)
+      .tickArguments([d3.timeMonth.every(1)]));
 
 });
 
