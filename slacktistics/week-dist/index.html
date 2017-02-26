@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Prototype</title>
+<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Lato:400,700">
+<style>
+
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  width: 90vw;
+  margin: auto;
+  background-color: #eee;
+  text-align: center;
+}
+
+svg {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 700px;
+}
+
+ul {
+  list-style: none;
+  padding: 1rem 0;
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  flex-grow: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.palPath {
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.tick {
+  font-family: "Lato";
+}
+
+</style>
+</head>
+<body>
+  <ul>
+  <li id="all">All</li>
+  <li id="general">#general</li>
+  <li id="ameriball">#ameriball</li>
+  <li id="spoilers">#spoilers</li>
+  <li id="politics">#politics</li>
+  </ul>
+  <svg viewbox="0 0 600 600"></svg>
+<script src="//d3js.org/d3.v4.min.js"></script>
+<script>
+
+  var pals = [
+    "Joe", "Luke", "Richard", "Pete", "Jeff", "Will", "Alex", "Emily"
+  ];
+  var colours = [
+    "#c0392b",
+    "#d35400",
+    "#f39c12",
+    "#16a085",
+    "#27ae60",
+    "#2980b9",
+    "#8e44ad",
+    "#2c3e50"
+  ];
+
+  var svg = d3.select("svg"),
+      margin = { top: 20, right: 20, bottom: 0, left: 30 },
+      width = 600 - margin.left - margin.right,
+      height = 600 - margin.top - margin.bottom,
+      g = svg.append("g").attr(
+        "transform", "translate(" + margin.left + "," + margin.top + ")"
+      );
+
+  var padding = 40;
+  var graphHeight = (height / pals.length) - padding;
+
+  var parseTime = d3.utcParse("%Y-%m-%d %H:%M");
+
+  var q = d3.queue();
+  q.defer(d3.csv, "all-week.csv")
+    .defer(d3.csv, "general-week.csv")
+    .defer(d3.csv, "ameriball-week.csv")
+    .defer(d3.csv, "spoilers-week.csv")
+    .defer(d3.csv, "politics-week.csv")
+    .await(drawChart);
+
+  function drawChart(error, all, general, ameriball, spoilers, politics) {
+    if (error) throw error;
+    all.forEach(function(d) {
+      d.Hours = parseTime(d.Hours);
+      for(i = 0; i < pals.length; i++) {
+        d[pals[i]] = +d[pals[i]];
+      }
+    });
+
+    general.forEach(function(d) {
+      d.Hours = parseTime(d.Hours);
+      for(i = 0; i < pals.length; i++) {
+        d[pals[i]] = +d[pals[i]];
+      }
+    });
+
+    ameriball.forEach(function(d) {
+      d.Hours = parseTime(d.Hours);
+      for(i = 0; i < pals.length; i++) {
+        d[pals[i]] = +d[pals[i]];
+      }
+    });
+
+    spoilers.forEach(function(d) {
+      d.Hours = parseTime(d.Hours);
+      for(i = 0; i < pals.length; i++) {
+        d[pals[i]] = +d[pals[i]];
+      }
+    });
+
+    politics.forEach(function(d) {
+      d.Hours = parseTime(d.Hours);
+      for(i = 0; i < pals.length; i++) {
+        d[pals[i]] = +d[pals[i]];
+      }
+    });
+
+    var x = d3.scaleTime()
+        .rangeRound([0, width])
+        .domain(d3.extent(all, function(d) { return d.Hours; }));
+
+    var y = d3.scaleLinear()
+        .rangeRound([graphHeight, 0]);
+
+    var z = d3.scaleOrdinal()
+        .range(colours);
+
+    var line = d3.line()
+        .x(function(d) { return x(d.Hours); })
+        .curve(d3.curveMonotoneX);
+
+    for (i = 0; i < pals.length; i++) {
+
+      var pal = g.append("g")
+          .attr("class", pals[i])
+          .attr(
+            "transform", "translate(0, " + (i * (graphHeight + padding)) + ")"
+          );
+
+      y.domain(d3.extent(all, function(d) { return d[pals[i]]; }));
+      line.y(function(d) { return y(d[pals[i]]); });
+
+      pal.append("text")
+          .text(pals[i])
+          .attr("text-anchor", "middle")
+          .attr("font-size", "0.7rem")
+          .attr("alignment-baseline", "hanging")
+          .attr("fill", z(i))
+          .attr("font-weight", 700);
+
+      pal.append("g")
+          .attr("class", "axis axis--x")
+          .attr("transform", "translate(0, " + graphHeight + ")")
+          .call(d3.axisBottom(x)
+              .ticks(8).tickFormat(d3.timeFormat("%a")));
+
+      pal.append("path")
+          .attr("class", "palPath")
+          .attr("d", function(d) { return line(all); })
+          .attr("stroke", z(i));
+    }
+
+    d3.selectAll("li")
+        .style("color", "#888");
+    d3.select("#all")
+        .style("color", "#000");
+
+    d3.select("#all").on("click", function() {
+        for (i = 0; i < pals.length; i++) {
+          y.domain(d3.extent(all, function(d) { return d[pals[i]]; }));
+
+          var pal = g.select("." + pals[i])
+            .select(".palPath")
+            .transition()
+            .duration(1500)
+            .attr("d", function(d) { return line(all); });
+        }
+        d3.selectAll("li")
+            .style("color", "#888");
+        d3.select("#all")
+            .style("color", "#000");
+    });
+
+    d3.select("#general").on("click", function() {
+        for (i = 0; i < pals.length; i++) {
+          y.domain(d3.extent(general, function(d) { return d[pals[i]]; }));
+
+          var pal = g.select("." + pals[i])
+            .select(".palPath")
+            .transition()
+            .duration(1500)
+            .attr("d", function(d) { return line(general); });
+        }
+        d3.selectAll("li")
+            .style("color", "#888");
+        d3.select("#general")
+            .style("color", "#000");
+    });
+
+    d3.select("#ameriball").on("click", function() {
+        for (i = 0; i < pals.length; i++) {
+          y.domain(d3.extent(ameriball, function(d) { return d[pals[i]]; }));
+
+          var pal = g.select("." + pals[i])
+            .select(".palPath")
+            .transition()
+            .duration(1500)
+            .attr("d", function(d) { return line(ameriball); });
+        }
+        d3.selectAll("li")
+            .style("color", "#888");
+        d3.select("#ameriball")
+            .style("color", "#000");
+    });
+
+    d3.select("#spoilers").on("click", function() {
+        for (i = 0; i < pals.length; i++) {
+          y.domain(d3.extent(spoilers, function(d) { return d[pals[i]]; }));
+
+          var pal = g.select("." + pals[i])
+            .select(".palPath")
+            .transition()
+            .duration(1500)
+            .attr("d", function(d) { return line(spoilers); });
+        }
+        d3.selectAll("li")
+            .style("color", "#888");
+        d3.select("#spoilers")
+            .style("color", "#000");
+    });
+
+    d3.select("#politics").on("click", function() {
+        for (i = 0; i < pals.length; i++) {
+          y.domain(d3.extent(politics, function(d) { return d[pals[i]]; }));
+
+          var pal = g.select("." + pals[i])
+            .select(".palPath")
+            .transition()
+            .duration(1500)
+            .attr("d", function(d) { return line(politics); });
+        }
+        d3.selectAll("li")
+            .style("color", "#888");
+        d3.select("#politics")
+            .style("color", "#000");
+    });
+
+  }
+
+</script>
+</body>
+</html>
