@@ -113,16 +113,33 @@
 
   function rewindAudio() {
     cancelAnimationFrame(animID);
-    animID = requestAnimationFrame(animateGraphics);
-    tapeAudio.playbackRate = -4;
-    tapeAudio.play();
+    tapeAudio.pause();
+    fastBackward();
   }
 
   function forwardAudio() {
     cancelAnimationFrame(animID);
-    animID = requestAnimationFrame(animateGraphics);
-    tapeAudio.playbackRate = 6;
-    tapeAudio.play();
+    tapeAudio.pause();
+    fastForward();
+  }
+
+  function fastForward() {
+    tapeAudio.currentTime += 0.15;
+
+    updateCounter();
+    updateTape();
+
+    animID = requestAnimationFrame(fastForward);
+  }
+
+  function fastBackward() {
+    if (tapeAudio.currentTime < 0.15) stopAudio();
+    else tapeAudio.currentTime -= 0.15;
+
+    updateCounter();
+    updateTape();
+
+    animID = requestAnimationFrame(fastBackward);
   }
 
   function animateGraphics() {
