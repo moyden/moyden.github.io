@@ -1,0 +1,56 @@
+<svg id="reel2reel" viewbox="0 0 320 160">
+
+  <g id="r2r-container" transform="translate(10, 10)">
+    <rect x="120" y="56" width="60" height="2"
+      rx="1" ry="1" stroke="none" fill="#ddd" />
+    <rect id="progressBar" x="120" y="56" rx="1" ry="1" width="0" height="2" />
+
+    <g class="tape" opacity="1">
+      <circle id="tape1" cx="50" cy="50" r="42" />
+      <circle id="tape2" cx="250" cy="50" r="22" />
+      <path d="M50 130 L 89 118 L 142 125" />
+      <path d="M158 125 L 211 118 L 248 125" />
+      <line id="lead1" x1="46" y1="125" x2="50" y2="50" />
+      <line id="lead2" x1="253" y1="120" x2="250" y2="50" />
+    </g>
+
+    <g id="reel1" class="reel"
+      transform="translate(50, 50) rotate(0)">
+      <circle cx="0" cy="0" r="50" />
+      <circle cx="0" cy="0" r="14" />
+      <circle cx="0" cy="0" r="4" />
+
+      <line x1="20" y1="0" x2="44" y2="0" />
+      <line x1="20" y1="0" x2="44" y2="0" transform="rotate(120)" />
+      <line x1="20" y1="0" x2="44" y2="0" transform="rotate(240)" />
+
+      <line x1="14" y1="0" x2="18" y2="0" transform="rotate(180)" />
+      <line x1="14" y1="0" x2="18" y2="0" transform="rotate(300)" />
+      <line x1="14" y1="0" x2="18" y2="0" transform="rotate(60)" />
+    </g>
+
+    <g id="reel2" class="reel"
+      transform="translate(250, 50) rotate(0)">
+      <circle cx="0" cy="0" r="50" />
+      <circle cx="0" cy="0" r="14" />
+      <circle cx="0" cy="0" r="4" />
+
+      <line x1="20" y1="0" x2="44" y2="0" />
+      <line x1="20" y1="0" x2="44" y2="0" transform="rotate(120)" />
+      <line x1="20" y1="0" x2="44" y2="0" transform="rotate(240)" />
+
+      <line x1="14" y1="0" x2="18" y2="0" transform="rotate(180)" />
+      <line x1="14" y1="0" x2="18" y2="0" transform="rotate(300)" />
+      <line x1="14" y1="0" x2="18" y2="0" transform="rotate(60)" />
+    </g>
+
+    <g class="tape-transport">
+      <circle cx="50" cy="125" r="5" />
+      <circle cx="90" cy="125" r="8" />
+      <line x1="150" y1="118" x2="150" y2="125" stroke="#ccc" />
+      <rect x="142" y="110" width="16" height="15" fill="none" />
+      <circle cx="210" cy="125" r="8" />
+      <circle cx="248" cy="120" r="5" />
+    </g>
+  </g>
+</svg>

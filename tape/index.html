@@ -5,32 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Inconsolata:500">
-    <script src="//d3js.org/d3.v4.min.js"></script>
+    <script src="//d3js.org/d3.v4.min.js" defer></script>
+    <script src="js/tape-player.js" defer></script>
+    <script>
+      audioTracks = [
+        { title: "Vacation", src: "audio/vacation.mp3" },
+        { title: "Sundown", src: "audio/sundown.mp3" },
+        { title: "Vacation Preview", src: "audio/short.mp3" },
+        { title: "Piano Test 2", src: "audio/testt.mp3" },
+        { title: "23 Dawn", src: "audio/23dawn.mp3" }
+      ]
+    </script>
   </head>
   <body>
+    <audio id="tape-audio"></audio>
+    <svg class="tape-player" viewbox="0 0 320 160">
 
-    <audio id="vacation">
-      <source src="vacation.mp3">
-      <!-- <source src="short.mp3"> -->
-      <!-- <source src="bbdbdbd.wav"> -->
-    </audio>
+      <g class="tape-player__container" transform="translate(10, 10)">
 
-    <svg id="reel2reel" viewbox="0 0 320 160">
+        <text class="tape-player__counter" id="time-counter" x="150" y="48">
+          00:00.0
+        </text>
 
-      <g id="r2r-container" transform="translate(10, 10)">
-        <rect x="120" y="56" width="60" height="2" stroke="none" fill="#ddd" />
-        <rect id="progressBar" x="120" y="56" width="0" height="2" />
+        <rect class="tape-player__progress--bar"
+          x="120" y="56" width="60" height="2" rx="1" ry="1" />
+        <rect class="tape-player__progress--fill" id="progress--fill"
+          x="120" y="56" width="0" height="2" rx="1" ry="1" />
 
-        <g class="tape">
-          <circle id="tape1" cx="50" cy="50" r="42" />
-          <circle id="tape2" cx="250" cy="50" r="22" />
-          <path d="M50 130 L 89 118 L 140 125" />
-          <path d="M160 125 L 211 118 L 248 125" />
-          <line id="lead1" x1="46" y1="125" x2="50" y2="50" />
-          <line id="lead2" x1="252" y1="120" x2="250" y2="50" />
+        <g class="tape-player__tape" opacity="1">
+          <circle id="tape--left" cx="50" cy="50" r="42" />
+          <circle id="tape--right" cx="250" cy="50" r="22" />
+          <path d="M50 130 L 89 118.5 L 142 125" />
+          <path d="M158 125 L 211 118.5 L 248 125" />
+          <line id="lead--left" x1="45" y1="125" x2="13.7" y2="71.1" />
+          <line id="lead--right" x1="253" y1="120" x2="271.2" y2="56.0" />
         </g>
 
-        <g id="reel1" class="reel"
+        <g class="tape-player__reel" id="reel--left"
           transform="translate(50, 50) rotate(0)">
           <circle cx="0" cy="0" r="50" />
           <circle cx="0" cy="0" r="14" />
@@ -45,7 +56,7 @@
           <line x1="14" y1="0" x2="18" y2="0" transform="rotate(60)" />
         </g>
 
-        <g id="reel2" class="reel"
+        <g class="tape-player__reel" id="reel--right"
           transform="translate(250, 50) rotate(0)">
           <circle cx="0" cy="0" r="50" />
           <circle cx="0" cy="0" r="14" />
@@ -60,219 +71,37 @@
           <line x1="14" y1="0" x2="18" y2="0" transform="rotate(60)" />
         </g>
 
-        <g class="tape-transport">
+        <g class="tape-player__transport">
           <circle cx="50" cy="125" r="5" />
-          <circle cx="90" cy="125" r="8" />
-          <line x1="150" y1="118" x2="150" y2="125" stroke="#ccc" />
-          <rect x="140" y="110" width="20" height="15" fill="none" />
-          <circle cx="210" cy="125" r="8" />
+          <circle cx="90" cy="125" r="7" />
+          <circle cx="90" cy="125" r="1" fill="#222" />
+          <line x1="150" y1="118" x2="150" y2="125" stroke="#222" />
+          <rect x="142" y="110" rx="0.5" ry="0.5" width="16" height="15" fill="none" />
+          <circle cx="210" cy="125" r="7" />
+          <rect x="-3" y="-0.25" rx="0.2" ry="0.2" width="6" height="0.1"
+            transform="translate(210, 125) rotate(-45)"/>
           <circle cx="248" cy="120" r="5" />
         </g>
       </g>
     </svg>
-    <script>
-      var gID; // initialize global ID for requestAnimationFrame()
-
-      // assign <audio> to variable and addEventListener for end of playback
-      var vacation = document.getElementById('vacation');
-      vacation.addEventListener('ended', function() {
-        cancelAnimationFrame(gID);
-        stopMusic();
-      });
-
-      function playAudio() {
-        cancelAnimationFrame(gID);
-        vacation.playbackRate = 1;
-        vacation.play();
-        gID = requestAnimationFrame(timeUpdate);
-      }
-
-      function pauseAudio() {
-        vacation.pause();
-        cancelAnimationFrame(gID);
-      }
-
-      function ffwdAudio() {
-        cancelAnimationFrame(gID);
-        vacation.playbackRate = 4;
-        vacation.play();
-        gID = requestAnimationFrame(timeUpdate);
-      }
-
-      function rewdAudio() {
-        cancelAnimationFrame(gID);
-        vacation.playbackRate = -4;
-        vacation.play();
-        gID = requestAnimationFrame(timeUpdate);
-      }
-
-      // create d3 scales for progress bar width, radius of tape,
-      // and angle of rotation
-      var x = d3.scaleLinear()
-        .range([0, 60]);
-
-      var r = d3.scalePow().exponent(1.4)
-        .range([42, 22]);
-
-      var theta = d3.scalePow().exponent(1.3);
-
-      // assign svg elements to js variables
-      var tape1 = d3.select('#tape1'),
-          tape2 = d3.select('#tape2'),
-          reel1 = d3.select('#reel1'),
-          reel2 = d3.select('#reel2'),
-          progressBar = d3.select('#progressBar');
-
-      var t1 = tangent(50, 50, 46, 125, r(0), 'left'),
-          t2 = tangent(250, 50, 252, 120, r(1), 'rights');
-
-      var lead1 = d3.select('#lead1')
-        .attr('x2', t1[0])
-        .attr('y2', t1[1]);
-
-      var lead2 = d3.select('#lead2')
-        .attr('x2', t2[0])
-        .attr('y2', t2[1]);
-
-      // add time counter to svg
-      var counter = d3.select('#r2r-container')
-          .append('text')
-        .text('00:00.0')
-        .attr('x', 150)
-        .attr('y', 48);
-
-      // once audio has loaded, set output range for angle of
-      // rotation scale and rotate reels to starting rotation
-      vacation.addEventListener('loadedmetadata', function() {
-
-        theta.range([vacation.duration*91, vacation.duration*1]);
-
-        reel1.attr('transform',
-          'translate(50, 50) rotate(' + theta(0) + ')');
-        reel2.attr('transform',
-          'translate(250, 50) rotate(' + (-theta(1)) + ')');
-
-      }, false)
-
-      function timeUpdate(){
-
-        // convert elapsed time to minutes:seconds.tenths string
-        // and update svg text
-        var elapsed = Math.floor(vacation.currentTime),
-            mins = Math.floor(elapsed/60),
-            secs = elapsed%60,
-            decs = "" + Math.floor(vacation.currentTime*10);
-        decs = decs.substring(decs.length - 1);
-        counter.text(zeroPad(mins) + ":" + zeroPad(secs) + "." + decs);
-
-        // use elapsed time to update progress bar width, radius
-        // of tape on reels and rotation
-        var p = vacation.currentTime / vacation.duration;
-        progressBar.attr('width', x(p));
-
-        tape1.attr('r', r(p));
-        tape2.attr('r', r(1 - p));
-        reel1.attr('transform', 'translate(50, 50) rotate(' + theta(p) + ')');
-        reel2.attr('transform', 'translate(250, 50) rotate(' + (-theta(1 - p)) + ')');
-
-        t1 = tangent(50, 50, 46, 125, r(p), 'left');
-        t2 = tangent(250, 50, 252, 120, r(1 - p), 'right');
-        lead1.attr('x2', t1[0]).attr('y2', t1[1]);
-        lead2.attr('x2', t2[0]).attr('y2', t2[1]);
-
-        // call function again at next animation frame
-        gID = requestAnimationFrame(timeUpdate);
-      }
-
-      function stopMusic() {
-        var dScale = d3.scaleLinear()
-          .domain([0, 300])
-          .range([250, 2000])
-          .clamp(true);
-
-        var dur = dScale(vacation.currentTime);
-        // cancel tape animation, pause audio reset audio
-        // playback position
-        cancelAnimationFrame(gID);
-        vacation.pause();
-        vacation.currentTime = 0;
-
-        // reset counter to 0
-        counter.text('00:00.0');
-
-        // reset progress bar and tape reels to starting positions
-        progressBar.transition()
-            .duration(dur)
-          .attr('width', x(0));
-
-        reel1.transition()
-            .duration(dur)
-          .attr('transform', 'translate(50, 50) rotate(' + theta(0) + ')');
-        reel2.transition()
-            .duration(dur)
-          .attr('transform', 'translate(250, 50) rotate(' + (-theta(1)) + ')');
-
-        tape1.transition()
-            .duration(dur)
-          .attr('r', r(0));
-        tape2.transition()
-            .duration(dur)
-          .attr('r', r(1));
-
-        t1 = tangent(50, 50, 46, 125, r(0), 'left');
-        t2 = tangent(250, 50, 252, 120, r(1), 'rights');
-        lead1.transition()
-            .duration(dur)
-          .attr('x2', t1[0])
-          .attr('y2', t1[1]);
-        lead2.transition()
-            .duration(dur)
-          .attr('x2', t2[0])
-          .attr('y2', t2[1]);
-      }
-
-      // function to calculate tangent between circle at
-      // x1, y1 with radius r and point at x2, y2.
-      // returns coordinates of point where tangent
-      // touches circle
-      function tangent(x1, y1, x2, y2, r, side) {
-        var h = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1-y2, 2)),
-            a1 = Math.asin(Math.abs(x1-x2)/h),
-            a2 = Math.asin(r/h),
-            a3 = a2 - a1,
-            l1 = Math.sqrt(Math.pow(h, 2) - Math.pow(r, 2));
-        if(side == 'left') var x3 = x2 - l1 * Math.sin(a3);
-        else var x3 = x2 + l1 * Math.sin(a3);
-        var y3 = y2 - l1 * Math.cos(a3);
-        return [x3, y3];
-      }
-
-      // function to convert integer to two digit zero-padded
-      // string
-      function zeroPad(num) {
-        var add0 = "0" + num;
-        return add0.substring(add0.length - 2);
-      }
-
-    </script>
-
-    <div class="controls">
-      <button onclick="rewdAudio();">
-        REWD
+    <div class="tape-player__controls">
+      <button class="tape-player__button" id="tape-control-to-start">
+        <img src="svg/controller-jump-to-start.svg" />
       </button>
-      <button onclick="playAudio();">
-        Play
+      <button class="tape-player__button" id="tape-control-pause">
+        <img src="svg/controller-paus.svg" />
       </button>
-      <button onclick="pauseAudio();">
-        Pause
+      <button class="tape-player__button tape-player__button--red" id="tape-control-play">
+        <img src="svg/controller-play.svg" />
       </button>
-      <button onclick="ffwdAudio();">
-        FFWD
+      <button class="tape-player__button" id="tape-control-rewind">
+        <img src="svg/controller-fast-backward.svg" />
       </button>
-      <button onclick="stopMusic();">
-        Stop
+      <button class="tape-player__button" id="tape-control-forward">
+        <img src="svg/controller-fast-forward.svg" />
       </button>
     </div>
-
+    <ul class="tape-player__song-list">
+    </ul>
   </body>
 </html>
