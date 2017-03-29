@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Super Cool Dynasty League</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Aleo:400,700/Lato:400,700">
+  <script src="js/jquery-3.2.0.slim.min.js"></script>
+  <script src="//d3js.org/d3.v4.min.js"></script>
+</head>
+
+  <body>
+
+  <script>
+    $(document).ready(function() {
+
+      $(".menu-link").click(function(event) {
+        $(this).toggleClass("is-active");
+        $(".espn-logo").toggleClass("is-active");
+        $(".navigation").toggleClass("is-hidden");
+        $("body").toggleClass("noscroll");
+      });
+
+    });
+  </script>
+  <svg class="menu-link" viewbox="0 0 70 60">
+    <g transform="translate(0, 5)">
+      <rect x="0" y="0" width="60" height="8" />
+      <rect x="0" y="20" width="60" height="8" />
+      <rect x="0" y="40" width="60" height="8" />
+    </g>
+  </svg>
+  <a href="#" class="espn-link">
+    <svg class="espn-logo" viewBox="0 0 100 100">
+      <g transform="translate(12, 0) skewX(-6.84)">
+        <rect x="0" y="0" width="88" height="28" />
+        <path d="M0 39 h 88 v 23 h -59 v 12 h 59 v 26 h -88 v -61" />
+      </g>
+    </svg>
+  </a>
+
+  <svg class="scdl-logo" viewbox="0 0 78 90">
+  <g transform="translate(6,6)">
+  <polygon points="3,2 63,2 63,54 33,70 3,54"
+    fill="white" stroke="white" stroke-width="20" />
+  <g fill="#e74c3c">
+    <rect x="12" y="31" width="6" height="32" />
+    <rect x="24" y="31" width="6" height="36" />
+    <rect x="36" y="31" width="6" height="36" />
+    <rect x="48" y="31" width="6" height="32" />
+  </g>
+
+  <polygon points="3,3 63,3 63,55 33,71 3,55"
+    fill="none" stroke="#2980b9" stroke-width="6" />
+  <rect x="3" y="3" width="58" height="29" fill="#2980b9" />
+
+  <g text-anchor="middle">
+    <text class="scdl-logo__text" x="33" y="22" textLength="54" fill="white">
+      SCDL
+    </text>
+  </g>
+  </g>
+</svg>
+
+
+  
+
+
+<header class="header lol-boys">
+
+
+  
+    <div class="banner">
+      <svg class="ribbon-left" viewbox="0 0 100 100">
+        <g>
+          <polygon class="ribbon__light lol-boys"
+            points="0,0 100,0 100,100 0,100 32,50" />
+          <polygon class="ribbon__dark lol-boys"
+            points="100,0 66,20 69,30 100,30" />
+        </g>
+      </svg>
+      <h1 class="team-name lol-boys">LOL Boys</h1>
+      <svg class="ribbon-right" viewbox="0 0 100 100">
+        <g>
+          <polygon class="ribbon__light lol-boys"
+            points="100,0 0,0 0,100 100,100 68,50" />
+          <polygon class="ribbon__dark lol-boys"
+            points="0,100 34,80 31,70 0,70" />
+        </g>
+      </svg>
+
+      
+      	<div class="team-stars">
+    			
+            <svg class="team-stars__star" viewBox="0 0 18 18" preserveAspectRatio="xMidYMid">
+              <path transform="translate(-3, -3)" d="M9.362 9.158c0 0-3.16 0.35-5.268 0.584-0.19 0.023-0.358 0.15-0.421 0.343s0 0.394 0.14 0.521c1.566 1.429 3.919 3.569 3.919 3.569-0.002 0-0.646 3.113-1.074 5.19-0.036 0.188 0.032 0.387 0.196 0.506 0.163 0.119 0.373 0.121 0.538 0.028 1.844-1.048 4.606-2.624 4.606-2.624s2.763 1.576 4.604 2.625c0.168 0.092 0.378 0.090 0.541-0.029s0.232-0.318 0.195-0.505c-0.428-2.078-1.071-5.191-1.071-5.191s2.353-2.14 3.919-3.566c0.14-0.131 0.202-0.332 0.14-0.524s-0.23-0.319-0.42-0.341c-2.108-0.236-5.269-0.586-5.269-0.586s-1.31-2.898-2.183-4.83c-0.082-0.173-0.254-0.294-0.456-0.294s-0.375 0.122-0.453 0.294c-0.874 1.932-2.183 4.83-2.183 4.83z"></path>
+            </svg>
+          
+        </div>
+      
+    </div>
+  
+</header>
+
+
+  
+<aside class="navigation is-hidden lol-boys">
+  <nav class="site-nav">
+    <ul class="site-nav__list">
+      <li class="site-nav__item">
+        <a href="#" class="site-nav__link">Home</a>
+      </li>
+      <li class="site-nav__item site-nav__teams">
+        <ul class="site-nav__team-list">
+          
+  					<li class="site-nav__team-item" data-wins="15" data-trophies="0">
+              <a class="site-nav__link site-nav__team-link" href="/colorado-pony-hospital.html">Colorado Pony Hospital</a>
+            </li>
+          
+  					<li class="site-nav__team-item" data-wins="7" data-trophies="0">
+              <a class="site-nav__link site-nav__team-link" href="/dillon-panthers.html">Dillon Panthers</a>
+            </li>
+          
+  					<li class="site-nav__team-item" data-wins="13" data-trophies="0">
+              <a class="site-nav__link site-nav__team-link" href="/dynasty-warriors.html">Dynasty Warriors III</a>
+            </li>
+          
+  					<li class="site-nav__team-item" data-wins="13" data-trophies="0">
+              <a class="site-nav__link site-nav__team-link" href="/jamaal-about-that-base.html">Jamaal About That Base</a>
+            </li>
+          
+  					<li class="site-nav__team-item" data-wins="15" data-trophies="1">
+              <a class="site-nav__link site-nav__team-link" href="/lol-boys.html">LOL Boys</a>
+            </li>
+          
+  					<li class="site-nav__team-item" data-wins="16" data-trophies="0">
+              <a class="site-nav__link site-nav__team-link" href="/london-lizards.html">London Lizards</a>
+            </li>
+          
+  					<li class="site-nav__team-item" data-wins="18" data-trophies="0">
+              <a class="site-nav__link site-nav__team-link" href="/oxford-white-sharks.html">Oxford White Sharks</a>
+            </li>
+          
+  					<li class="site-nav__team-item" data-wins="15" data-trophies="1">
+              <a class="site-nav__link site-nav__team-link" href="/team-hgh.html">Team HGH</a>
+            </li>
+          
+        </ul>
+      </li>
+      <li class="site-nav__item">
+        <a href="#" class="site-nav__link">Power Ranks</a>
+      </li>
+      <li class="site-nav__item">
+        <a href="#" class="site-nav__link">History</a>
+      </li>
+      <li class="site-nav__item">
+        <a href="#" class="site-nav__link">Rules</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+
+  <div class="content">
+  
+
+
+
+
+
+
+
+
+<div class="tp-wrapper">
+	<div class="tp-wrapper__sub-wrapper tp-wrapper__stats">
+		<section class="tp-block tp-block__capinfo lol-boys">
+			<h2 class="tp-block__title">Salary Cap</h2>
+			<ul class="cap-info__list">
+				<li class="cap-info__item">
+					<span class="cap-info__label">Team Cap</span>$ 200
+				</li>
+				<li class="cap-info__item">
+					<span class="cap-info__label">Cap Hit</span>$ 192
+				</li>
+				<li class="cap-info__item">
+					<span class="cap-info__label">Cap Space</span>$ 8
+				</li>
+			</ul>
+		  <table class="summary">
+		    <thead>
+		      <tr>
+		        <th class="category">Contracts Summary</th>
+		        <th class="cost">$</th>
+		        <th class="year">yr</th>
+		      </tr>
+		    </thead>
+		  </table>
+		</section>
+
+		<section class="tp-block tp-block__graphs lol-boys">
+			<h2 class="tp-block__title">Projected Cap Hit</h2>
+			<svg class="projCap" viewbox="0 0 300 150">
+			</svg>
+		</section>
+	</div>
+
+	<div class="tp-wrapper__sub-wrapper tp-wrapper__players">
+		<section class="tp-block tp-block__roster lol-boys">
+			<h2 class="tp-block__title">Current Roster</h2>
+		  <table class="quarterbacks">
+		    <thead>
+		      <tr>
+		        <th class="number">#</th>
+		        <th>Quarterbacks</th>
+		        <th class="cost">$</th>
+		        <th class="year">yr</th>
+		      </tr>
+		    </thead>
+		  </table>
+		  <table class="runningbacks">
+		    <thead>
+		      <tr>
+		        <th class="number">#</th>
+		        <th>Running Backs</th>
+		        <th class="cost">$</th>
+		        <th class="year">yr</th>
+		      </tr>
+		    </thead>
+		  </table>
+		  <table class="widereceivers">
+		    <thead>
+		      <tr>
+		        <th class="number">#</th>
+		        <th>Wide Receivers</th>
+		        <th class="cost">$</th>
+		        <th class="year">yr</th>
+		      </tr>
+		    </thead>
+		  </table>
+		  <table class="tightends">
+		    <thead>
+		      <tr>
+		        <th class="number">#</th>
+		        <th>Tight Ends</th>
+		        <th class="cost">$</th>
+		        <th class="year">yr</th>
+		      </tr>
+		    </thead>
+		  </table>
+		</section>
+
+		<section class="tp-block tp-block__dropped lol-boys">
+			<h2 class="tp-block__title">Outstanding Contracts</h2>
+			<table class="dropped">
+		    <thead>
+		      <tr>
+		        <th class="position">Pos</th>
+		        <th>Player</th>
+		        <th class="cost">$</th>
+		        <th class="year">yr</th>
+		      </tr>
+		    </thead>
+		  </table>
+		</section>
+	</div>
+</div>
+
+  </div>
+
+	<footer class="footer">
+  footer
+</footer>
+
+
+  <script src="js/nav-sort.js"></script>
+  
+
+    
+
+    <script>
+      var teamName = "LOL Boys",
+          teamID = "lol-boys";
+    </script>
+    <script src="js/teampage.js"></script>
+  
+
+  </body>
+
+</html>

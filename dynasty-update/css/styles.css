@@ -1,0 +1,668 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif, sans-serif;
+  font-size: 1rem;
+  background-color: white; }
+
+h1, h2, h3 {
+  font-family: "Aleo", serif, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1em; }
+
+table {
+  width: 100%;
+  border-spacing: 0px;
+  margin-top: 1.5em; }
+
+th, td {
+  border-bottom: 1px solid black;
+  text-align: left;
+  padding: 0.6em 0.3em 0.4em 0.3em; }
+
+th {
+  font-weight: 700; }
+
+td {
+  border-bottom-color: #f0f0f0; }
+
+tr:nth-child(2) td {
+  padding-top: 0.6em; }
+
+tr:last-child td {
+  border-bottom-style: none; }
+
+@media screen and (min-width: 400px) {
+  body {
+    background-color: #f8f8f8; } }
+
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0;
+  margin: auto;
+  overflow: auto;
+  height: 100%;
+  max-width: 450px; }
+
+body.noscroll {
+  overflow: hidden; }
+
+.header, .navigation, .content, .footer {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 100%;
+      -ms-flex: 1 100%;
+          flex: 1 100%; }
+
+.header {
+  display: block;
+  position: relative;
+  z-index: -1; }
+
+.navigation {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%;
+  overflow: scroll;
+  -webkit-transition: opacity 0.4s, visibility 0.4s;
+  transition: opacity 0.4s, visibility 0.4s; }
+
+.navigation.is-hidden {
+  visibility: hidden;
+  opacity: 0; }
+
+.content {
+  display: block;
+  font-size: 0.8rem; }
+
+.footer {
+  display: block; }
+
+@media screen and (min-width: 400px) {
+  .content, .navigation {
+    font-size: 0.8rem; } }
+
+@media screen and (min-width: 700px) {
+  body {
+    max-width: 1500px; } }
+
+@media screen and (min-width: 1000px) {
+  body {
+    padding: 0 2em; }
+  body.noscroll {
+    overflow: auto; }
+  .content, .navigation {
+    font-size: 0.75em; }
+  .navigation {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 30.5%;
+        -ms-flex: 1 30.5%;
+            flex: 1 30.5%; }
+  .navigation.is-hidden {
+    left: 0%;
+    visibility: visible;
+    opacity: 1; }
+  .content {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 66%;
+        -ms-flex: 1 66%;
+            flex: 1 66%; } }
+
+@media screen and (min-width: 1300px) {
+  body {
+    padding: 0 2em; }
+  .content, .navigation {
+    font-size: 0.7em; }
+  .navigation {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 23%;
+        -ms-flex: 1 23%;
+            flex: 1 23%; }
+  .content {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 75%;
+        -ms-flex: 1 75%;
+            flex: 1 75%; } }
+
+.tp-block img {
+  width: 100%; }
+
+.tp-block {
+  padding: 1.5em 1em;
+  margin: 1em 0.5em; }
+
+.tp-block__title {
+  font-size: 1.1em; }
+
+.cap-info__list {
+  font-size: 1.1em;
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  max-width: 350px;
+  margin: auto;
+  margin-top: 1.5em; }
+
+.cap-info__item {
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 33%;
+      -ms-flex: 1 33%;
+          flex: 1 33%;
+  padding: 0.5em 0; }
+
+.cap-info__label {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+  font-size: 0.8em;
+  font-weight: 400; }
+
+.tp-block__graphs {
+  display: none; }
+
+.tp-block__graphs svg {
+  width: 100%; }
+
+.cap-line {
+  fill: none;
+  stroke: black;
+  stroke-width: 1.5; }
+
+.tick text {
+  font-family: "Lato", sans-serif; }
+
+.x-axis text {
+  -webkit-transform: translate(0, 6px);
+      -ms-transform: translate(0, 6px);
+          transform: translate(0, 6px); }
+
+.y-axis .domain,
+.y-axis .tick line {
+  display: none; }
+
+.gridlines .tick line {
+  stroke: #f0f0f0; }
+
+.gridlines .domain,
+.gridlines text {
+  display: none; }
+
+path.colorado-pony-hospital {
+  stroke: #e67e22; }
+
+path.dillon-panthers {
+  stroke: #2980b9; }
+
+path.dynasty-warriors {
+  stroke: #6f4d4b; }
+
+path.jamaal-about-that-base {
+  stroke: #d4392b; }
+
+path.lol-boys {
+  stroke: #323232; }
+
+path.london-lizards {
+  stroke: #177e40; }
+
+path.oxford-white-sharks {
+  stroke: #148e96; }
+
+path.team-hgh {
+  stroke: #34495e; }
+
+.injured-reserve {
+  margin-left: 0.5em;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #e74c3c; }
+
+table.summary tbody tr:last-child td {
+  font-weight: 700; }
+
+td.category, th.category {
+  padding-left: 1em; }
+
+td.position, td.number {
+  width: 3em; }
+
+td.cost, td.year {
+  width: 4em; }
+
+td.year, th.year {
+  padding-right: 1em; }
+
+th.number, th.position,
+td.number, td.position {
+  text-align: center; }
+
+th.cost, th.year,
+td.cost, td.year {
+  text-align: right; }
+
+@media screen and (min-width: 400px) {
+  .cap-info__item {
+    padding: 0.5em 0; }
+  .tp-wrapper {
+    padding: 0.5em;
+    max-width: 500px;
+    margin: auto; }
+  .tp-block {
+    background-color: white;
+    border-top: 0.3em solid black;
+    font-size: 1em; }
+  .tp-block.colorado-pony-hospital {
+    border-top-color: #e67e22; }
+  .tp-block.dillon-panthers {
+    border-top-color: #2980b9; }
+  .tp-block.dynasty-warriors {
+    border-top-color: #6f4d4b; }
+  .tp-block.jamaal-about-that-base {
+    border-top-color: #d4392b; }
+  .tp-block.lol-boys {
+    border-top-color: #323232; }
+  .tp-block.london-lizards {
+    border-top-color: #177e40; }
+  .tp-block.oxford-white-sharks {
+    border-top-color: #148e96; }
+  .tp-block.team-hgh {
+    border-top-color: #34495e; } }
+
+@media screen and (min-width: 700px) {
+  .tp-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    max-width: 800px; }
+  .tp-wrapper__sub-wrapper {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 50%;
+        -ms-flex: 1 50%;
+            flex: 1 50%; }
+  .tp-block__graphs {
+    display: block; } }
+
+@media screen and (min-width: 1000px) {
+  .tp-wrapper {
+    max-width: none; }
+  .tp-wrapper__stats {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2; }
+  .tp-wrapper__players {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1; } }
+
+@media screen and (min-width: 1300px) {
+  .tp-wrapper__stats {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 33%;
+        -ms-flex: 1 33%;
+            flex: 1 33%;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1; }
+  .tp-wrapper__players {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 66%;
+        -ms-flex: 1 66%;
+            flex: 1 66%;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .tp-block__roster, .tp-block__dropped {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 50%;
+        -ms-flex: 1 50%;
+            flex: 1 50%; } }
+
+.header {
+  font-size: 1rem;
+  text-align: center;
+  padding: 4em 0 0.75em 0; }
+
+.header.colorado-pony-hospital {
+  background-color: #e67e22;
+  border-bottom: 0.4em solid #3498db; }
+
+.header.dillon-panthers {
+  background-color: #2980b9;
+  border-bottom: 0.4em solid #c0392b; }
+
+.header.dynasty-warriors {
+  background-color: #6f4d4b;
+  border-bottom: 0.4em solid #e67e22; }
+
+.header.jamaal-about-that-base {
+  background-color: #d4392b;
+  border-bottom: 0.4em solid #f1c40f; }
+
+.header.lol-boys {
+  background-color: #323232;
+  border-bottom: 0.4em solid #141414; }
+
+.header.london-lizards {
+  background-color: #177e40;
+  border-bottom: 0.4em solid #f1c40f; }
+
+.header.oxford-white-sharks {
+  background-color: #148e96;
+  border-bottom: 0.4em solid #f39c12; }
+
+.header.team-hgh {
+  background-color: #34495e;
+  border-bottom: 0.4em solid #2ecc71; }
+
+.scdl-logo {
+  height: 2.5em;
+  position: absolute;
+  top: 1em;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 5; }
+
+.menu-link {
+  height: 1.2em;
+  position: absolute;
+  left: 1.4em;
+  top: 1.6em;
+  fill: white;
+  z-index: 5;
+  -webkit-transition: fill 0.4s;
+  transition: fill 0.4s; }
+
+.espn-link {
+  display: block;
+  position: absolute;
+  right: 1.4em;
+  top: 1.5em;
+  z-index: 5; }
+
+.espn-logo {
+  fill: white;
+  height: 1.1em;
+  -webkit-transition: fill 0.4s;
+  transition: fill 0.4s; }
+
+.menu-link.is-active, .espn-logo.is-active {
+  fill: black; }
+
+.banner {
+  display: block;
+  margin-top: 0.5em; }
+
+.team-name {
+  color: white;
+  display: inline-block; }
+
+.ribbon-left, .ribbon-right {
+  display: none;
+  height: 28px; }
+
+.team-stars {
+  display: block;
+  text-align: center;
+  height: 1.2em;
+  font-size: 0.6em;
+  margin-top: 0.5em; }
+
+.team-stars__star {
+  height: 1.2em;
+  display: inline-block;
+  position: relative;
+  left: -0.05em;
+  margin: 0;
+  vertical-align: top;
+  fill: white; }
+
+@media screen and (min-width: 400px) {
+  .header.colorado-pony-hospital,
+  .header.dillon-panthers,
+  .header.dynasty-warriors,
+  .header.jamaal-about-that-base,
+  .header.lol-boys,
+  .header.london-lizards,
+  .header.oxford-white-sharks,
+  .header.team-hgh {
+    background-color: #fff;
+    border-style: none;
+    -webkit-box-shadow: 0 0 3em 3em white;
+            box-shadow: 0 0 3em 3em white; }
+  .menu-link, .espn-logo {
+    fill: #000; }
+  .team-name {
+    position: relative;
+    color: white;
+    height: 28px;
+    line-height: 27px;
+    padding: 0 0.5em;
+    vertical-align: top;
+    z-index: 1; }
+  .team-stars {
+    margin-top: 1em; }
+  .team-stars__star {
+    fill: #f39c12; }
+  .banner {
+    -webkit-transform: scale(1) skewY(-3deg);
+        -ms-transform: scale(1) skewY(-3deg);
+            transform: scale(1) skewY(-3deg);
+    margin: 0.5 0 0 0; }
+  .ribbon-left {
+    display: inline;
+    position: relative;
+    left: 14px;
+    top: -6px; }
+  .ribbon-right {
+    display: inline;
+    position: relative;
+    left: -14px;
+    top: 6px; }
+  .team-name.colorado-pony-hospital {
+    background-color: #e67e22; }
+  .team-name.dillon-panthers {
+    background-color: #2980b9; }
+  .team-name.dynasty-warriors {
+    background-color: #6f4d4b; }
+  .team-name.jamaal-about-that-base {
+    background-color: #d4392b; }
+  .team-name.lol-boys {
+    background-color: #323232; }
+  .team-name.london-lizards {
+    background-color: #177e40; }
+  .team-name.oxford-white-sharks {
+    background-color: #148e96; }
+  .team-name.team-hgh {
+    background-color: #34495e; }
+  .ribbon__light.colorado-pony-hospital {
+    fill: #3498db; }
+  .ribbon__light.dillon-panthers {
+    fill: #c0392b; }
+  .ribbon__light.dynasty-warriors {
+    fill: #e67e22; }
+  .ribbon__light.jamaal-about-that-base {
+    fill: #f1c40f; }
+  .ribbon__light.lol-boys {
+    fill: #141414; }
+  .ribbon__light.london-lizards {
+    fill: #f1c40f; }
+  .ribbon__light.oxford-white-sharks {
+    fill: #f39c12; }
+  .ribbon__light.team-hgh {
+    fill: #2c3e50; }
+  .ribbon__dark.colorado-pony-hospital {
+    fill: #1f76a5; }
+  .ribbon__dark.dillon-panthers {
+    fill: #bdc3c7; }
+  .ribbon__dark.dynasty-warriors {
+    fill: #bf4a00; }
+  .ribbon__dark.jamaal-about-that-base {
+    fill: #f39c12; }
+  .ribbon__dark.lol-boys {
+    fill: #bdc3c7; }
+  .ribbon__dark.london-lizards {
+    fill: #f39c12; }
+  .ribbon__dark.oxford-white-sharks {
+    fill: #dc7422; }
+  .ribbon__dark.team-hgh {
+    fill: #2ecc71; } }
+
+@media screen and (min-width: 1000px) {
+  .menu-link {
+    display: none; } }
+
+.navigation {
+  background-color: white;
+  padding: 0;
+  border-top: 4.5em solid white; }
+
+.site-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.site-nav__team-list {
+  list-style: none;
+  margin: 1em;
+  padding: 0; }
+
+.site-nav__item {
+  font-weight: 700;
+  margin: 0;
+  text-align: center; }
+
+.site-nav__team-item {
+  font-weight: 400;
+  text-align: center; }
+
+.site-nav__link {
+  display: inline-block;
+  margin: 0.5em 0;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none; }
+
+.site-nav__team-link {
+  text-transform: capitalize; }
+
+@media screen and (min-width: 550px) {
+  .navigation {
+    border-top-width: 6em; }
+  .site-nav__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column wrap;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    height: 70vh;
+    -webkit-align-content: space-around;
+        -ms-flex-line-pack: distribute;
+            align-content: space-around; }
+  .site-nav__team-list {
+    margin: 0; }
+  .site-nav__item {
+    width: 45%;
+    text-align: right; }
+  .site-nav__team-item {
+    text-align: left; }
+  .site-nav__teams {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 100%;
+        -ms-flex: 1 100%;
+            flex: 1 100%; } }
+
+@media screen and (min-width: 1000px) {
+  .navigation {
+    border: none;
+    margin: 1.5em 0 1.5em 1em;
+    border-top: 0.3em solid black;
+    padding: 1.5em 3em; }
+  .navigation.colorado-pony-hospital {
+    border-top-color: #e67e22; }
+  .navigation.dillon-panthers {
+    border-top-color: #2980b9; }
+  .navigation.dynasty-warriors {
+    border-top-color: #6f4d4b; }
+  .navigation.jamaal-about-that-base {
+    border-top-color: #d4392b; }
+  .navigation.lol-boys {
+    border-top-color: #323232; }
+  .navigation.london-lizards {
+    border-top-color: #177e40; }
+  .navigation.oxford-white-sharks {
+    border-top-color: #148e96; }
+  .navigation.team-hgh {
+    border-top-color: #34495e; }
+  .site-nav__list {
+    display: block;
+    height: auto; }
+  .site-nav__item {
+    text-align: left;
+    width: 100%; }
+  .site-nav__team-list {
+    margin: 1em 0; }
+  .site-nav__link {
+    margin: 0.25em 0;
+    padding: 0.1em 0;
+    border-bottom: 1px solid white; }
+  .site-nav__link:hover, .site-nav__link:focus {
+    border-bottom-color: black; } }
+
+.scdl-logo__text {
+  font-family: "Aleo", serif;
+  font-weight: 700;
+  font-size: 1.2rem; }
