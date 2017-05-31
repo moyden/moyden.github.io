@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Jeff's Space</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        width: 80%;
+        margin: auto;
+        font-family: 'Arial', sans-serif;
+      }
+      h1 {
+        text-transform: uppercase;
+        text-align: center;
+        color: crimson;
+        text-shadow: 0.1em 0.1em coral,
+                     0.2em 0.2em gold;
+      }
+      p {
+        margin: 0.5em 0;
+      }
+      nav ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin: 0 -0.5em;
+      }
+      nav li {
+        display: inline-block;
+        background-color: steelblue;
+        padding: 1em;
+        margin: 0.5em;
+        flex: 1 0 100%;
+        text-align: center;
+        color: white;
+        border-radius: 0.25em;
+        transition: background-color 0.2s;
+        cursor: pointer;
+      }
+      nav li:hover {
+        background-color: dodgerblue;
+      }
+      section {
+        width: 100%;
+        overflow: hidden;
+      }
+      #container {
+        width: 400%;
+        display: flex;
+        position: relative;
+        left: 0%;
+        transition: left 0.5s;
+      }
+      article {
+        flex: 1 0 25%;
+        text-align: justify;
+      }
+      article li {
+        margin: 0.5em 0;
+      }
+      @media (min-width: 500px) {
+        nav li {
+          flex: 1 0 20%;
+        }
+      }
+    </style>
+    <script src="https://unpkg.com/jquery"></script>
+  </head>
+  <body>
+    <h1>Jeff's Space</h1>
+    <nav>
+      <ul>
+        <li id="homeButton">Home</li>
+        <li id="aboutButton">About</li>
+        <li id="backgroundButton">Background</li>
+        <li id="resourcesButton">Resources</li>
+      </ul>
+    </nav>
+    <section>
+      <div id="container">
+        <article>
+          <p>Had some free server space - hence this page.</p>
+          <p>This site will probably eternally be a work in progress. I have lots of different ideas for it, but not the time. I'll try to occasionally update it and add some interesting features and/or open source content.</p>
+          <p>The table below is my version of Conway's Game of Life; see 'Background'</p>
+          <p>If the colours below look rubbish (or you do not like the quote), try refreshing the page.</p>
+        </article>
+        <article>
+          <p>I'm a Ph.D. student at the University of Southern California in Los Angeles, working in the <a href="http://www.dornsife.usc.edu/physics/">Physics Department</a>. My research focuses on Quantum Computation and Information.</p>
+          <p>In the past you could have found me at <a href="http://www2.warwick.ac.uk/">The University of Warwick</a>.</p>
+          <p>For contact info. and other stuff, see my <a href="http://www.dornsife.usc.edu/cf/phys/student_display.cfm?Person_ID=1044245">research page</a> (also <a href="https://scholar.google.com/citations?user=sYElCxIAAAAJ&hl=en">Google Scholar</a>).</p>
+        </article>
+        <article>
+          <p>The 'background' on this page is a realisation of John Conway's Game of Life.</p>
+          <p>There are much better versions of this on the web; I only added it in to make the site have some actual content. Feel free to use the code (admittedly it's not great code) for yourself - you can reference me if you like, but not necessary.</p>
+          <p>There are 3 simple rules to this 'game'. If a cell is 'alive', it can die in 2 ways; overcrowding (having more than 3 neighbours), or solitude (having 1 or fewer neighbours). If a cell is considered 'dead', it can come to life if it has 3 neighbours.</p>
+          <p>Despite the simple rules, incredible complexity can arise - it has been shown that general computations can be performed on a Game of Life board.</p>
+          <p>My version below uses a random colour for the 'dead' cells, and the inverse colour for the alive. I initialise it with what Conway coined the 'glider'; this shape will continue to move forever, with no obstructions. You can also pause the game and trace over the cells using the mouse (may be tricky on mobile-type device), and restart to see the effect - usually some mess ending up in a stable state.</p>
+          <p>Disclaimer - there may occasionally be some odd behaviour, as I made this very quickly, and haven't bothered to debug it extensively.</p>
+        </article>
+        <article>
+          <p>Some (mostly physics) notes and other things (e.g. computer projects) which I've worked on at some point (of which I thought is useful, or just fun). I don't attest to the quality of any of this - lot's of it was done fairly quickly, without enough thought; there may be mistakes (but hopefully not too many). Occasionally I will try to add more stuff.</p>
+          <h2>Notes</h2>
+          <ul>
+            <li>
+              <a href="http://www-scf.usc.edu/~jsmarsha/websiteDocs_pdf/vectorisation.pdf">Notes on 'Vectorisation'</a>: a tool that can be used to compute superoperators by reducing their action to left (or right) matrix multiplication.
+            </li>
+            <li>
+              <a href="http://www-scf.usc.edu/~jsmarsha/websiteDocs_pdf/operator-norms.pdf">Notes on operator (and superoperator) norms</a>, with application in quantum mechanics.
+            </li>
+            <li>
+              <a href="http://www-scf.usc.edu/~jsmarsha/websiteDocs_pdf/homomorphisms.pdf">Notes on group mappings</a> (homomorphisms, automorphisms etc.), with some examples of the Galois correspondance.
+            </li>
+            <li>
+              <a href="http://www-scf.usc.edu/~jsmarsha/websiteDocs_pdf/PT.pdf">Notes on Hamiltonian Perturbation Theory in Quantum Mechanics.</a>
+            </li>
+          </ul>
+          <h2>Computer Projects</h2>
+          <ul>
+            <li>
+              <a href="http://www-scf.usc.edu/~jsmarsha/websiteDocs_pdf/energy_counter.c">Exact solution counter</a> for an Ising model with arbitrary couplings. That is, it generates the histogram of all energy levels for an Ising model. Actually, this code is probably not very useful as a whole (it was fairly specific to what I needed it for at the time, and unfortunately is not as general as it could be), but some parts of it may be helpful. The input files should be of form 'i	j	Jij' (tab separated). The function that does it all is called Count_Solutions. I never bothered to optimise this code (as I didn't need to), but I tried it on up to 31 bits, and it has no problem there.
+            </li>
+            <li>
+              <a href="http://www-scf.usc.edu/~jsmarsha/websiteDocs_pdf/wangLandau.c">Wang-Landau Entropic sampler</a> for estimating degeneracies of Ising problems. <a href="http://www-scf.usc.edu/~jsmarsha/websiteDocs_pdf/plantedFrustLoops_Nq31_Nsg3_s0.dat">Example input file</a>: Don't worry too much about the header lines, or the 'planted solution' (one can easily modify the LoadJijToRAM function to change the file format).
+            </li>
+            <li>
+              <a href="http://www-scf.usc.edu/~jsmarsha/stockLookup/stockLookup-JMarshall.html">Stock Market Search Website</a>. Examples of <a href="http://getbootstrap.com/">Bootstrap</a>, <a href="https://jquery.com/">jQuery</a>, and a few different API including an <a href="http://www.highcharts.com/">interactive chart generator</a>, and <a href="https://developers.facebook.com/docs/javascript">Facebook</a>.
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <script>
+      const containerDiv = $('#container')
+      shiftContainer = function (amount) {
+        containerDiv.css('left', amount)
+      }
+
+      $('#homeButton').click(function () {
+        shiftContainer('0%')
+      })
+      $('#aboutButton').click(function () {
+        shiftContainer('-100%')
+      })
+      $('#backgroundButton').click(function () {
+        shiftContainer('-200%')
+      })
+      $('#resourcesButton').click(function () {
+        shiftContainer('-300%')
+      })
+    </script>
+  </body>
+</html>
