@@ -1,33 +1,33 @@
 Team,Player,Position,Contract Value,Contract Length,Dropped
 Colorado Pony Hospital,Melvin Gordon,RB,16,2,false
-Colorado Pony Hospital,Thomas Rawls,RB,9,2,false
+Colorado Pony Hospital,Thomas Rawls,RB,9,2,true
 Colorado Pony Hospital,Matt Jones,RB,4,1,true
-Colorado Pony Hospital,Giovani Bernard,RB,2,2,false
+Colorado Pony Hospital,Giovani Bernard,RB,2,2,true
 Colorado Pony Hospital,David Cobb,RB,2,2,true
 Colorado Pony Hospital,Davante Adams,WR,12,3,false
 Colorado Pony Hospital,Demaryius Thomas,WR,10,1,false
 Colorado Pony Hospital,Jordy Nelson,WR,9,2,false
 Colorado Pony Hospital,Randall Cobb,WR,9,1,false
-Colorado Pony Hospital,Eric Decker,WR,7,1,false
+Colorado Pony Hospital,Eric Decker,WR,7,1,true
 Colorado Pony Hospital,Kevin White,WR,3,2,true
 Colorado Pony Hospital,Allen Robinson,WR,3,1,false
-Colorado Pony Hospital,John Brown,WR,3,1,false
+Colorado Pony Hospital,John Brown,WR,3,1,true
 Colorado Pony Hospital,Michael Thomas,WR,1,2,false
-Colorado Pony Hospital,Eric Ebron,TE,1,1,false
+Colorado Pony Hospital,Eric Ebron,TE,1,1,true
 Dillon Panthers,Blake Bortles,QB,3,4,false
 Dillon Panthers,Le'Veon Bell,RB,59,3,false
-Dillon Panthers,Jamaal Charles,RB,59,1,false
+Dillon Panthers,Jamaal Charles,RB,59,1,true
 Dillon Panthers,Dion Lewis,RB,3,2,false
 Dillon Panthers,Denard Robinson,RB,1,1,true
 Dillon Panthers,Cameron Artis-Payne,RB,1,1,false
-Dillon Panthers,Julian Edelman,WR,17,2,false
+Dillon Panthers,Julian Edelman,WR,17,2,true
 Dillon Panthers,Brandin Cooks,WR,15,3,false
 Dillon Panthers,Nelson Agholor,WR,4,2,false
 Dillon Panthers,Sterling Shepherd,WR,3,4,false
 Dillon Panthers,Markus Wheaton,WR,1,2,false
 Dillon Panthers,Coby Fleener,TE,2,3,false
-Dillon Panthers,Gary Barnidge,TE,2,2,false
-Dillon Panthers,Richard Rodgers,TE,1,1,false
+Dillon Panthers,Gary Barnidge,TE,2,2,true
+Dillon Panthers,Richard Rodgers,TE,1,1,true
 Dynasty Warriors II,Andrew Luck,QB,36,3,false
 Dynasty Warriors II,Ameer Abdullah,RB,12,3,false
 Dynasty Warriors II,Dez Bryant,WR,49,1,false
@@ -75,12 +75,12 @@ London Lizards,DeVante Parker,WR,4,1,false
 London Lizards,Zach Ertz,TE,1,3,false
 Oxford White Sharks,Ryan Tannehill,QB,3,1,true
 Oxford White Sharks,Sam Bradford,QB,1,1,true
-Oxford White Sharks,Ezekiel Elliot,RB,37,3,false
+Oxford White Sharks,Ezekiel Elliott,RB,37,3,false
 Oxford White Sharks,Todd Gurley,RB,30,2,false
 Oxford White Sharks,Lamar Miller,RB,16,1,false
 Oxford White Sharks,Devontae Booker,RB,1,2,false
 Oxford White Sharks,Jerick McKinnon,RB,1,1,false
-Oxford White Sharks,Spencer Ware,RB,1,1,false
+Oxford White Sharks,Spencer Ware,RB,1,1,true
 Oxford White Sharks,Julio Jones,WR,35,2,false
 Oxford White Sharks,A.J. Green,WR,20,2,false
 Oxford White Sharks,Amari Cooper,WR,11,3,false
