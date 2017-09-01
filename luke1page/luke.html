@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/luke.css">
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="container">
+    <section class="info">
+      <h1>Luke Carlisle</h1>
+
+      <p>London based director</p>
+
+      <ul class="contacts">
+        <li>e-mail: lpwcarlisle@gmail.com</li>
+        <li>twitter: @carrrlisle</li>
+        <li>vimeo: lukecarlisle</li>
+      </ul>
+    </section>
+
+    <div class="video">
+      <div class="embed-container">
+        <iframe v-bind:src="current.source" frameborder='0'
+          webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+
+        </iframe>
+      </div>
+    </div>
+
+    <section class="videos">
+      <h2>Videos</h2>
+      <ul class="video-list">
+        <li v-for="film in catalog" v-on:click="loadVideo(film)" class="video-list__item" :class="{ isPlaying: film.active }">
+          {{ film.name }}
+        </li>
+      </ul>
+    </section>
+  </div>
+  <script src="/js/luke.js"></script>
+</body>
+</html>
