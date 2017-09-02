@@ -145,7 +145,7 @@ Oxford White Sharks,Christian McCaffrey,RB,17,4,false
 Oxford White Sharks,Lamar Miller,RB,16,1,false
 Oxford White Sharks,LeGarrette Blount,RB,2,2,false
 Oxford White Sharks,Terrance West,RB,2,1,false
-Oxford White Sharks,Devontae Booker,RB,1,2,false
+Oxford White Sharks,Devontae Booker,RB,1,2,true
 Oxford White Sharks,Jerick McKinnon,RB,1,1,false
 Oxford White Sharks,Spencer Ware,RB,1,1,true
 Oxford White Sharks,Rex Burkhead,RB,1,1,false
@@ -159,6 +159,7 @@ Oxford White Sharks,Eric Decker,WR,3,1,false
 Oxford White Sharks,Pierre Garcon,WR,2,1,false
 Oxford White Sharks,Rishard Matthews,WR,1,2,false
 Oxford White Sharks,Tyler Eifert,TE,1,1,false
+Oxford White Sharks,Eric Ebron,TE,1,1,false
 Team HGH,Russell Wilson,QB,20,3,false
 Team HGH,Derek Carr,QB,10,2,false
 Team HGH,Teddy Bridgewater,QB,2,1,true
