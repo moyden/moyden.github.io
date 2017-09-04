@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/draft2.css">
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/d3"></script>
+  <style>
+  </style>
+</head>
+<body>
+<div class="skirt"></div>
+<div id="cont" class="lists">
+  <div class="roster">
+    <h2>Roster</h2>
+    <ul>
+      <li v-for="player in ranks" v-if="player.mine && player.pos === 'QB'">
+        <span class="name">{{ player.name }}</span>
+        <span class="team" :class="player.team">{{ player.team }}</span>
+      </li>
+    </ul>
+    <ul>
+      <li v-for="player in ranks" v-if="player.mine && player.pos === 'RB'">
+        <span class="name">{{ player.name }}</span>
+        <span class="team" :class="player.team">{{ player.team }}</span>
+      </li>
+    </ul>
+    <ul>
+      <li v-for="player in ranks" v-if="player.mine && player.pos === 'WR'">
+        <span class="name">{{ player.name }}</span>
+        <span class="team" :class="player.team">{{ player.team }}</span>
+      </li>
+    </ul>
+    <ul>
+      <li v-for="player in ranks" v-if="player.mine && player.pos === 'TE'">
+        <span class="name">{{ player.name }}</span>
+        <span class="team" :class="player.team">{{ player.team }}</span>
+      </li>
+    </ul>
+  </div>
+  <ul class="headings">
+    <li class="QB">QB</li>
+    <li class="RB">RB</li>
+    <li class="WR">WR</li>
+    <li class="TE">TE</li>
+  </ul>
+  <ol>
+    <li v-for="(player, index) in ranks"
+        v-if="index >= highestAvailable"
+        class="rank"
+        :class="[{ strike: player.drafted, mine: player.mine }, player.pos]"
+    >
+      <span class="add" v-on:click="addPlayer(player)">+</span>
+      <span class="name" v-on:click="strikePlayer(player)">{{ player.name }}</span>
+      <span class="team" :class="player.team">{{ player.team }}</span>
+    </li>
+  </ol>
+</div>
+<script src="/js/draft2.js"></script>
+</body>
+</html>

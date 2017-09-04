@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,700");
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 11px; }
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  padding: 1em;
+  margin-left: 3em;
+  width: 80%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #f8f8f8;
+  -webkit-font-smoothing: subpixel-antialiased; }
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.skirt {
+  background-color: #f8f8f8;
+  width: 100vw;
+  height: 4em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+
+.roster {
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  width: 15%;
+  z-index: 2; }
+  .roster h2 {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    height: 30px; }
+  .roster li {
+    width: 100%;
+    margin: 0.2em 0;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+  .roster li:last-child {
+    margin-bottom: 2em; }
+
+.headings {
+  font-weight: 700;
+  height: 30px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2em;
+  z-index: 2; }
+  .headings li {
+    display: inline-block;
+    width: 19%;
+    position: absolute;
+    font-size: 1.2em; }
+  .headings .RB {
+    left: 25%; }
+  .headings .WR {
+    left: 50%; }
+  .headings .TE {
+    left: 75%; }
+
+.rank {
+  margin: 0.2em 0;
+  width: 19%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  cursor: pointer; }
+
+.rank.RB {
+  left: 25%; }
+
+.rank.WR {
+  left: 50%; }
+
+.rank.TE {
+  left: 75%; }
+
+.add {
+  position: absolute;
+  left: -1.5em; }
+
+.name {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto; }
+
+.team {
+  position: relative;
+  font-weight: 600; }
+
+.strike {
+  text-decoration: line-through;
+  opacity: 0.15; }
+
+.mine {
+  opacity: 0.4;
+  text-decoration: none; }
+  .mine .name, .mine .team {
+    font-weight: 600; }
+  .mine .add {
+    display: none; }
+
+.team.DEN {
+  color: #f26522; }
+
+.team.KC {
+  color: #bf0223; }
+
+.team.LAC {
+  color: #007ec4; }
+
+.team.OAK {
+  color: #000000; }
+
+.team.BAL {
+  color: #31196b; }
+
+.team.CIN {
+  color: #f27200; }
+
+.team.CLE {
+  color: #3d210c; }
+
+.team.PIT {
+  color: #000000; }
+
+.team.BUF {
+  color: #194b8c; }
+
+.team.MIA {
+  color: #008e97; }
+
+.team.NE {
+  color: #223c83; }
+
+.team.NYJ {
+  color: #16452d; }
+
+.team.HOU {
+  color: #94072d; }
+
+.team.IND {
+  color: #003c75; }
+
+.team.JAC {
+  color: #0e4a57; }
+
+.team.TEN {
+  color: #6395bf; }
+
+.team.ARI {
+  color: #9a0533; }
+
+.team.LAR {
+  color: #001945; }
+
+.team.SEA {
+  color: #002858; }
+
+.team.SF {
+  color: #c6233e; }
+
+.team.CHI {
+  color: #061e3e; }
+
+.team.DET {
+  color: #0069b3; }
+
+.team.GB {
+  color: #003b2a; }
+
+.team.MIN {
+  color: #4e2683; }
+
+.team.DAL {
+  color: #00295b; }
+
+.team.NYG {
+  color: #003d7e; }
+
+.team.PHI {
+  color: #004149; }
+
+.team.WAS {
+  color: #79002e; }
+
+.team.ATL {
+  color: #c9243f; }
+
+.team.CAR {
+  color: #000000; }
+
+.team.NO {
+  color: #9e8857; }
+
+.team.TB {
+  color: #bf093a; }
