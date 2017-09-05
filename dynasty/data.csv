@@ -1,5 +1,7 @@
 Team,Player,Position,Contract Value,Contract Length,Dropped
+Colorado Pony Hospital,Drew Brees,QB,6,1,false
 Colorado Pony Hospital,Marcus Mariota,QB,5,4,false
+Colorado Pony Hospital,Blake Bortles,QB,3,4,false
 Colorado Pony Hospital,Jay Ajayi,RB,25,2,false
 Colorado Pony Hospital,Leonard Fournette,RB,20,4,false
 Colorado Pony Hospital,Thomas Rawls,RB,9,2,true
@@ -7,7 +9,6 @@ Colorado Pony Hospital,Melvin Gordon,RB,16,2,false
 Colorado Pony Hospital,Doug Martin,RB,8,1,false
 Colorado Pony Hospital,Tevin Coleman,RB,5,2,false
 Colorado Pony Hospital,Matt Jones,RB,4,1,true
-Colorado Pony Hospital,Darren McFadden,RB,4,1,false
 Colorado Pony Hospital,Jamaal Charles,RB,3,1,false
 Colorado Pony Hospital,Giovani Bernard,RB,2,2,true
 Colorado Pony Hospital,David Cobb,RB,2,2,true
@@ -21,18 +22,16 @@ Colorado Pony Hospital,Eric Decker,WR,7,1,true
 Colorado Pony Hospital,Kevin White,WR,3,2,true
 Colorado Pony Hospital,Allen Robinson,WR,3,1,false
 Colorado Pony Hospital,John Brown,WR,3,1,true
-Colorado Pony Hospital,Chris Hogan,WR,2,1,false
 Colorado Pony Hospital,Michael Thomas,WR,1,2,false
 Colorado Pony Hospital,Hunter Henry,TE,4,2,false
 Colorado Pony Hospital,Delanie Walker,TE,4,1,false
 Colorado Pony Hospital,O.J. Howard,TE,1,5,false
 Colorado Pony Hospital,Eric Ebron,TE,1,1,true
 Dillon Panthers,Aaron Rodgers,QB,12,3,false
-Dillon Panthers,Drew Brees,QB,6,1,false
-Dillon Panthers,Blake Bortles,QB,3,4,false
 Dillon Panthers,Le'Veon Bell,RB,59,3,false
 Dillon Panthers,Jamaal Charles,RB,59,1,true
 Dillon Panthers,Adrian Peterson,RB,4,1,false
+Dillon Panthers,Darren McFadden,RB,4,1,false
 Dillon Panthers,Dion Lewis,RB,3,2,false
 Dillon Panthers,Frank Gore,RB,3,1,false
 Dillon Panthers,Mike Gillislee,RB,2,2,false
@@ -47,6 +46,7 @@ Dillon Panthers,Sterling Shepherd,WR,3,4,false
 Dillon Panthers,John Ross,WR,2,4,false
 Dillon Panthers,DeSean Jackson,WR,2,2,false
 Dillon Panthers,Larry Fitzgerald,WR,2,1,false
+Dillon Panthers,Chris Hogan,WR,2,1,false
 Dillon Panthers,Markus Wheaton,WR,1,2,false
 Dillon Panthers,Greg Olsen,TE,5,2,false
 Dillon Panthers,Coby Fleener,TE,2,3,false
