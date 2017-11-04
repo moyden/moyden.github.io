@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Overpass");
+body {
+  background-color: #f4f4f3;
+  text-align: center; }
+
+svg {
+  background-color: transparent;
+  margin-top: 2rem;
+  max-width: 400px; }
+
+.watch__centre {
+  fill: #940f0c; }
+
+.watch__hand {
+  fill: #9f1916; }
+
+.watch__ticks {
+  stroke: #424e52; }
+
+.watch__numerals {
+  fill: #424e52;
+  font-family: 'Overpass', sans-serif; }
+
+.watch__daylight-arc {
+  fill: #f3c444; }
