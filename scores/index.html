@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/scores.css">
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/jquery"></script>
+  <script src="https://unpkg.com/d3"></script>
+</head>
+<body>
+  <div class="j-vm">
+    <!-- <svg xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         viewBox="0 0 88 100"
+         version="1.1"
+         class="league-logo">
+
+      <title>SCDL Logo</title>
+
+      <defs>
+        <clipPath id="shield-cutout">
+          <polygon points="8,44 80,44 80,70 44,90 8,70"></polygon>
+        </clipPath>
+      </defs>
+
+      <polygon class="league-logo__shield" points="0,0 88,0 88,75 44,100 0,75"></polygon>
+
+      <g clip-path="url(#shield-cutout)">
+        <rect fill="white" x="0" y="0" width="88" height="100" />
+
+        <rect class="league-logo__stripe" x="16" y="0" width="8" height="100" />
+        <rect class="league-logo__stripe" x="32" y="0" width="8" height="100" />
+        <rect class="league-logo__stripe" x="48" y="0" width="8" height="100" />
+        <rect class="league-logo__stripe" x="64" y="0" width="8" height="100" />
+      </g>
+
+      <text class="league-logo__text" x="44" y="31" fill="white" text-anchor="middle" textLength="72">SCDL</text>
+    </svg> -->
+    <!-- <h2>Dynasty</h2> -->
+    <ul class="games">
+      <li v-for="game in games" class="game">
+        <div class="game__team--home">
+        <span class="team__score">{{ game.homeScore }}</span>
+          <span class="team__name">{{ game.homeTeam }}</span>
+          <span class="team__record">{{ game.homeRec }}</span>
+        </div>
+        <div class="game__scorebar" v-bind:class="[ game.homeNick ]" v-bind:style="{ width: game.homeWidth }">
+          <div class="scorebar__progress" v-bind:class="[ game.homeNick ]" v-bind:style="{ width: game.homeProp }"></div>
+        </div>
+        <div class="game__team--away">
+        <span class="team__score">{{ game.awayScore }}</span>
+          <span class="team__name">{{ game.awayTeam }}</span>
+          <span class="team__record">{{ game.awayRec }}</span>
+        </div>
+        <div class="game__scorebar" v-bind:class="[ game.awayNick ]" v-bind:style="{ width: game.awayWidth }">
+          <div class="scorebar__progress" v-bind:class="[ game.awayNick ]" v-bind:style="{ width: game.awayProp }"></div>
+        </div>
+      </li>
+    </ul>
+    <!-- <pre>{{ $data }}</pre> -->
+  </div>
+  <script src="js/scores.js"></script>
+</body>
+</html>

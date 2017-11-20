@@ -1,0 +1,131 @@
+$blue: #2980b9;
+$red: #e74c3c;
+$white: #fff;
+$black: #2c3e50;
+$grey: #e8e8e8;
+$dark: rgb(41, 42, 68);
+
+// team colors
+$cph: #e67e22;
+$lol: #323232;
+$dwi: #6f4d4b;
+$oxf: #148e96;
+$jama: #e73c2c;
+$lzrd: #177e40;
+$dill: #2980b9;
+$hgh: #34495e;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: $grey;
+  color: $black;
+  font-family: 'Roboto', monospace;
+  font-size: 14px;
+  margin: .25em;
+}
+
+h2 {
+  font-size: 1.4em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  width: 100%;
+}
+
+.games {
+  display: grid;
+  grid-gap: .5em;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  padding: .25em;
+  // flex-flow: row wrap;
+  // justify-content: flex-start;
+}
+
+.game {
+  background-color: $white;
+  border-radius: .125em;
+  box-shadow: 0 1px 1px transparentize($black, .9);
+  // flex: 1 0 240px;
+  // margin: .25em;
+  padding: .5em .75em .25em;
+}
+
+@media screen and (min-width: 1000px) {
+  .games {
+    // flex: row nowrap;
+  }
+
+  .game {
+    // flex: 1 1 260px;
+  }
+}
+
+%game__team {
+  margin: .125em 0;
+}
+
+.game__team--home,
+.game__team--away {
+  @extend %game__team;
+}
+
+.team__name {
+  // text-transform: uppercase;
+}
+
+.team__record {
+  font-size: .75em;
+  opacity: .5;
+}
+
+.team__score {
+  float: right;
+}
+
+$bar-height: 3px;
+$transparency: .75;
+
+.game__scorebar {
+  background-color: transparentize($black, $transparency);
+  border-radius: .125em;
+  height: $bar-height;
+  margin: .25em 0 .75em;
+  width: 100%;
+
+  // &.cph { background-color: transparentize($cph, $transparency); }
+  // &.lol { background-color: transparentize($lol, $transparency); }
+  // &.dwi { background-color: transparentize($dwi, $transparency); }
+  // &.oxf { background-color: transparentize($oxf, $transparency); }
+  // &.jama { background-color: transparentize($jama, $transparency); }
+  // &.lzrd { background-color: transparentize($lzrd, $transparency); }
+  // &.dill { background-color: transparentize($dill, $transparency); }
+  // &.hgh { background-color: transparentize($hgh, $transparency); }
+}
+
+.scorebar__progress {
+  background-color: $black;
+  border-radius: .125em;
+  height: $bar-height;
+  width: 50%;
+
+  &.cph { background-color: $cph; }
+  &.lol { background-color: $lol; }
+  &.dwi { background-color: $dwi; }
+  &.oxf { background-color: $oxf; }
+  &.jama { background-color: $jama; }
+  &.lzrd { background-color: $lzrd; }
+  &.dill { background-color: $dill; }
+  &.hgh { background-color: $hgh; }
+}
