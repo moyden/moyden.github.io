@@ -10,6 +10,8 @@ const json = {
 const setProportions = function () {
   const rP = d3.format('.2%')
   json.games.forEach(game => {
+    if (game.homeProj === '') game.homeProj = game.homeScore
+    if (game.awayProj === '') game.awayProj = game.awayScore
     game.homeWidth = rP(+game.homeProj / 160)
     game.awayWidth = rP(+game.awayProj / 160)
     game.homeProp = rP(+game.homeScore / +game.homeProj)
