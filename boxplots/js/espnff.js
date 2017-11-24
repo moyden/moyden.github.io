@@ -114,10 +114,10 @@ function drawPlots(year) {
         var upQuartile = d3.quantile(sortedScores, 0.75);
         var iqr = upQuartile - lowQuartile;
         var outliers = sortedScores.filter(function (x) {
-          return x > upQuartile + iqr || x < lowQuartile - iqr;
+          return x > upQuartile + 1.5 * iqr || x < lowQuartile - 1.5 * iqr;
         });
         var notOutliers = sortedScores.filter(function (x) {
-          return x < upQuartile + iqr && x > lowQuartile - iqr;
+          return x < upQuartile + 1.5 * iqr && x > lowQuartile - 1.5 * iqr;
         });
         var _min = d3.min(notOutliers);
         var _max = d3.max(notOutliers);
