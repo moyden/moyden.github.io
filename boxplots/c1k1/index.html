@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/jquery"></script>
+  <script src="https://unpkg.com/d3"></script>
+  <style>
+    body {
+      margin: auto;
+      max-width: 800px;
+      text-align: center;
+    }
+    select {
+      margin: 1em;
+    }
+    svg {
+      /*border: 1px solid black;*/
+      display: block;
+      font-family: 'Helvetica', sans-serif;
+      font-size: 11px;
+    }
+
+    /*text.cph { fill: #e67e22; }
+    text.dill { fill: #2980b9; }
+    text.dwi { fill: #6f4d4b; }
+    text.hgh { fill: #34495e; }
+    text.jama { fill: #e73c2c; }
+    text.lol { fill: #323232; }
+    text.lzrd { fill: #177e40; }
+    text.oxf { fill: #148e96; }*/
+  </style>
+</head>
+<body>
+  <select name="season" id="j-season">
+    <option value="2013">2013</option>
+    <option value="2014">2014</option>
+    <option value="2015">2015</option>
+    <option value="2016">2016</option>
+    <option value="2017" selected>2017</option>
+  </select>
+  <svg class="chart" viewBox="0 0 800 600"></svg>
+  <script src="js/espnff.js"></script>
+</body>
+</html>
