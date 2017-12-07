@@ -11,11 +11,15 @@ var json = {
 
 var setProportions = function setProportions() {
   var rP = d3.format('.2%');
+  var max = d3.max(json.games, function (d) {
+    return d.homeProj > d.awayProj ? d.homeProj : d.awayProj;
+  });
+  var high = max > 150 ? max : 150;
   json.games.forEach(function (game) {
     if (game.homeProj === '') game.homeProj = game.homeScore;
     if (game.awayProj === '') game.awayProj = game.awayScore;
-    game.homeWidth = rP(+game.homeProj / 160);
-    game.awayWidth = rP(+game.awayProj / 160);
+    game.homeWidth = rP(+game.homeProj / high);
+    game.awayWidth = rP(+game.awayProj / high);
     game.homeProp = rP(+game.homeScore / +game.homeProj);
     game.awayProp = rP(+game.awayScore / +game.awayProj);
   });
