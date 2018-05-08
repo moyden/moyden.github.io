@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="d3.js"></script>
+    <style>
+      body {
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        margin: 0 auto;
+        max-width: 1500px;
+        padding: 4em 6em;
+      }
+
+      text {
+        font-family: 'Helvetica', 'Arial', sans-serif;
+      }
+
+      svg {
+        /*border: 1px solid black;*/
+        display: block;
+        margin: auto;
+        max-height: 95vh;
+        max-width: 95vw;
+        width: 100%;
+      }
+
+      header {
+      }
+
+      section {
+        margin: 6em 0;
+      }
+
+      .graph-modal {
+        display: flex;
+      }
+
+      .graph-modal > .info {
+        flex: 0 0 20%;
+        margin-right: 4em;
+        padding: 0;
+      }
+
+      .graph-modal > .graph {
+        flex: 1 1 80%;
+      }
+
+      .info > h3 {
+        margin-top: .5em;
+      }
+
+      .info > p {
+        /*text-align: justify;*/
+      }
+
+      .control {
+        color: #888;
+        cursor: pointer;
+      }
+
+      .control.active {
+        color: #000;
+      }
+
+      span.red {
+        color: crimson;
+        font-weight: 600;
+      }
+
+      span.blue {
+        color: steelblue;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body class="l-body">
+    <header>
+      <h1>Renewal Comms Data</h1>
+      <h2>Joseph Moyden</h2>
+    </header>
+
+    <section class="graph-modal">
+      <div class="info">
+        <h3>Renewal Comms Historical Open Rate</h3>
+        <p>The open rate (%) of renewal comms e-mails for each month of the dataset.</p>
+        <p>No e-mails were recorded open between April 2012 and October 2013.</p>
+        <p>The average (mean) rate across the recorded time, excluding the above period, was 27.81%.</p>
+        <p>From October 2013 forward the average open rate was 37.60%.</p>
+      </div>
+      <div class="graph">
+        <svg id="j-historical-open-rate" viewbox="0 0 750 500"></svg>
+      </div>
+    </section>
+    <script src="historicalOpenRate.js"></script>
+
+    <section class="graph-modal">
+      <div class="info">
+        <h3>Number of Cancellations by Month</h3>
+        <p>The total number of cancellations recorded for each month of the dataset</p>
+        <p>A large concentration of cancellations around 2013 suggests the absence of renewal e-mail opens may not be missing data.</p>
+        <p>There is a shallow downwards trend of cancellations from 2014 onwards, however there are regular peaks in late summer and around the new year.</p>
+      </div>
+      <div class="graph">
+        <svg id="j-cancellation-month" viewbox="0 0 750 500"></svg>
+      </div>
+    </section>
+    <script src="cancellationByMonth.js"></script>
+
+    <section class="graph-modal">
+      <div class="info">
+        <h3>Days between Plan End and Cancellation Date</h3>
+        <p>
+          <span class="control active" id="j-cbe1">6 Months</span> |
+          <span class="control" id="j-cbe2">3 Months</span> |
+          <span class="control" id="j-cbe3">1 Month</span>
+        </p>
+        <p>1460 Plan cancellations were made within 6 months of the members' current plan end date.</p>
+        <p>A majority of cancellations (~ 30%) occur either the day before, or on the day of cancellation.</p>
+        <p>The next highest frequency of cancellations (~ 5%) were made 15 days from the end of the members' plan.</p>
+        <p>Significant peaks of cancellations also occur at regular half-monthly intervals</p>
+      </div>
+      <div class="graph">
+        <svg id="j-cancels-before-end" viewbox="0 0 750 500"></svg>
+      </div>
+    </section>
+    <script src="cancelsBeforeEnd.js"></script>
+
+    <section class="graph-modal">
+      <div class="info">
+        <h3>Renewal Comms Sent and Opened by Month</h3>
+        <p>
+          <span class="control active" id="j-mg1">Sent/Open Values</span> |
+          <span class="control" id="j-mg2">Open %</span>
+        </p>
+        <p>From October 2013 onwards, aggregate numbers by month of e-mails <span class="red">sent</span> and <span class="blue">opened</span> and percentage of e-mails opened.</p>
+        <p>The percentage of e-mails opened is mostly consistent throughout the year, with the highest percentage of e-mails opened in September and May.</p>
+      </div>
+      <div class="graph">
+        <svg id="j-month-graph" viewbox="0 0 750 500"></svg>
+      </div>
+    </section>
+    <script src="monthGraph.js"></script>
+
+    <section class="graph-modal">
+      <div class="info">
+        <h3>Renewal Comms Sent and Opened by Weekday</h3>
+        <p>
+          <span class="control active" id="j-dg1">Sent/Open Values</span> |
+          <span class="control" id="j-dg2">Open %</span>
+        </p>
+        <p>From October 2013 onwards, aggregate numbers by weekday of e-mails <span class="red">sent</span> and <span class="blue">opened</span> and percentage of e-mails opened.</p>
+        <p>E-mails currently tend to be sent at the start of the week. Very few e-mails are sent on Saturday with none sent on Sunday.</p>
+        <p>Open percentage is reasonably consistent across the week; Wednesday and Thursday having the highest rate of opens.</p>
+      </div>
+      <div class="graph">
+        <svg id="j-day-graph" viewbox="0 0 750 500"></svg>
+      </div>
+    </section>
+    <script src="dayGraph.js"></script>
+  </body>
+</html>
