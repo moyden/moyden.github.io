@@ -1,20 +1,50 @@
 @import url("https://fonts.googleapis.com/css?family=Barlow:400,700");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900");
 html {
   font-size: 16px; }
 
 body {
   background-color: white;
-  font-family: 'Barlow', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1em;
   margin: auto;
   max-width: 500px;
   position: relative; }
 
 .page-title {
-  font-size: 1.5em;
-  margin: .25em;
+  font-size: 2em;
+  font-weight: 700;
+  margin: .5em;
   text-align: center;
   text-transform: uppercase; }
+
+.page-title__left,
+.page-title__right {
+  display: inline-block; }
+
+.page-title__left {
+  background-color: white;
+  position: relative; }
+  .page-title__left::before {
+    color: white;
+    content: '3';
+    display: inline-block;
+    left: -.1em;
+    position: absolute;
+    text-shadow: 0 1px white, 0 -1px white, -.1em 0 black;
+    z-index: -1; }
+
+.page-title__right {
+  background-color: white;
+  position: relative; }
+  .page-title__right::after {
+    color: white;
+    content: 'S';
+    display: inline-block;
+    right: -.1em;
+    position: absolute;
+    text-shadow: 0 1px white, 0 -1px white, .1em 0 black;
+    z-index: -1; }
 
 .stereo__still {
   display: inline-block;
@@ -41,6 +71,7 @@ body {
   width: 100%; }
 
 .controls {
+  font-size: 1.25em;
   padding: .75em; }
 
 .controls__next,
@@ -48,7 +79,7 @@ body {
   cursor: pointer;
   float: right;
   opacity: .75;
-  width: 1.5em; }
+  width: 2em; }
   .controls__next:hover,
   .controls__prev:hover {
     opacity: 1; }
@@ -78,8 +109,10 @@ body {
   body {
     font-size: 1.25em; }
   .page-title {
+    font-size: 2em;
     margin: .75em; }
   .stereo__mask {
     border-radius: 8px; }
   .controls {
+    font-size: 1em;
     padding: 1.25em; } }
