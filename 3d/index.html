@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/3d.css">
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <h1 class="page-title">3D Photos</h1>
+  <div class="j-vm l-container">
+    <div class="stereo__mask">
+      <div class="stereo__container" :class="{ 'stereo__container--show': display }">
+        <img class="stereo__still j-still__1" :src="'assets/3ds/' + n + '_1.jpg'" />
+        <img class="stereo__still j-still__2" :src="'assets/3ds/' + n + '_2.jpg'" />
+        <img class="stereo__still j-still__3" :src="'assets/3ds/' + n + '_3.jpg'" />
+        <img class="stereo__still j-still__4" :src="'assets/3ds/' + n + '_4.jpg'" />
+      </div>
+    </div>
+
+    <div class="controls">
+      <img class="controls__prev" src="assets/3ds/controller-play.svg" @click="dec">
+      <img class="controls__next" src="assets/3ds/controller-play.svg" @click="inc">
+    </div>
+  </div>
+  <script src="js/3d.js"></script>
+</body>
+</html>

@@ -9,18 +9,25 @@
       }
       img {
         display: inline-block;
-        height: 280px;
-        margin: 3em;
-        width: auto;
+        /*height: auto;*/
+        max-height: 50vh;
+        object-fit: cover;
+        width: 100%;
+      }
+      .container {
+        /*background-color: red;
+        max-height: 50vh;
+        margin: auto;
+        max-width: 50vw;*/
       }
     </style>
   </head>
   <body>
     <header>
-      <div>
-        <img class="site-branding__logotype" src="site-logotype-vector.svg" alt="Home" onerror="this.src='site-logotype_web.png'; this.onerror=null;" />
-        <img class="site-branding__logo" src="site-logo-vector.svg" alt="Home" onerror="this.src='site-logo_web.png'; this.onerror=null;" />
+      <div class="container">
+        <img class="site-branding__logo" src="1.png" alt="Home" onerror="this.src='site-logo_web.png'; this.onerror=null;" />
       </div>
     </header>
+    <img src="test.svg" alt="svg">
   </body>
 </html>

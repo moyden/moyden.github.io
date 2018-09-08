@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow:400,700");
+html {
+  font-size: 16px; }
+
+body {
+  background-color: white;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1em;
+  margin: auto;
+  max-width: 500px;
+  position: relative; }
+
+.page-title {
+  font-size: 1.5em;
+  margin: .25em;
+  text-align: center;
+  text-transform: uppercase; }
+
+.stereo__still {
+  display: inline-block;
+  float: left;
+  max-width: 25%; }
+
+.stereo__container {
+  -webkit-animation: lenticulate 0.4s steps(3, end) infinite;
+  animation: lenticulate 0.4s steps(3, end) infinite;
+  line-height: 0;
+  position: relative;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  opacity: 0;
+  width: 400%; }
+
+.stereo__container--show {
+  opacity: 1; }
+
+.stereo__mask {
+  background: url(../assets/3ds/loading.svg);
+  margin: auto;
+  overflow: hidden;
+  width: 100%; }
+
+.controls {
+  padding: .75em; }
+
+.controls__next,
+.controls__prev {
+  cursor: pointer;
+  float: right;
+  opacity: .75;
+  width: 1.5em; }
+  .controls__next:hover,
+  .controls__prev:hover {
+    opacity: 1; }
+
+.controls__prev {
+  float: left;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+@-webkit-keyframes lenticulate {
+  from {
+    left: 0; }
+  50% {
+    left: -300%; }
+  to {
+    left: 0; } }
+
+@keyframes lenticulate {
+  from {
+    left: 0; }
+  50% {
+    left: -300%; }
+  to {
+    left: 0; } }
+
+@media all and (min-width: 500px) {
+  body {
+    font-size: 1.25em; }
+  .page-title {
+    margin: .75em; }
+  .stereo__mask {
+    border-radius: 8px; }
+  .controls {
+    padding: 1.25em; } }
