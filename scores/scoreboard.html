@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/scoreboard.css">
+  <script src="https://unpkg.com/vue"></script>
+  <!-- <script src="https://unpkg.com/jquery"></script> -->
+  <script src="https://unpkg.com/d3"></script>
+</head>
+<body>
+  <main class="j-vm">
+    <!-- <button type="button" @click="fetchData">refresh</button> -->
+    <section v-for="matchup in matchups" class="scoreboard__matchup" @click="expandMatchup(matchup)">
+      <header>
+        <ul class="matchup__summary">
+          <li v-for="team in matchup.data" class="summary__team">
+              <span class="team__name">{{ team.team }}</span>
+              <span class="team__score">{{ team.actualPoints }}</span>
+              <div class="team__projectedScoreBar" :style="{ 'flex-basis': team.projWidth }">
+                <div class="team__actualScoreBar" :style="{ 'width': team.actualWidth }"></div>
+              </div>
+          </li>
+        </ul>
+      </header>
+      <ul class="matchup__teams" :class="{ 'matchup__teams--visible': matchup.expanded }">
+        <li v-for="team in matchup.data" class="matchup__team">
+          <h2 class="team__abbrev">{{ team.abbrev }}</h2>
+          <ol class="team__players">
+            <li v-for="player in team.players" class="team__player" :class="['team__player--' + player.gameStatus]">
+              <div class="player__name">
+                <span class="player__firstName">{{ player.firstName }}</span>
+                <span class="player__lastName">{{ player.lastName }}</span>
+              </div>
+              <div class="player__score">{{ player.actualPoints }}</div>
+            </li>
+          </ol>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <script src="js/scoreboard.js"></script>
+</body>
+</html>
