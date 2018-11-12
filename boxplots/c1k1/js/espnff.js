@@ -24,7 +24,7 @@ var x = d3.scaleBand().rangeRound([0, width]).paddingInner(0.8).paddingOuter(0.2
 
 var y = d3.scaleLinear().rangeRound([height, 60]);
 
-drawPlots(2017);
+drawPlots(2018);
 
 $('#j-season').change(function () {
   drawPlots(this.value);
