@@ -1,20 +1,173 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/slow.css">
-  <script src="https://unpkg.com/d3"></script>
-  <script src="https://unpkg.com/suncalc"></script>
-</head>
-<body>
-  <svg class="watch" viewbox="0 0 320 320">
-    <defs>
-      <filter id="shadow">
-        <feDropShadow dx="4" dy="8" stdDeviation="4" />
-      </filter>
-    </defs>
-  </svg>
-  <script src="js/slow.js"></script>
-</body>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>
+			Slow Clock
+		</title>
+		<style>
+			html, body {
+				height: 100%;
+			}
+			
+			body {
+				display: flex;
+				flex-flow: column;
+				justify-content: center;
+				margin: 0;
+			}
+
+			svg {
+				background-color: #fff;
+				display: block;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+				font-weight: 500;
+				margin: auto;
+				max-height: 100vh;
+				max-width: 100vw;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<noscript>Slow Clock requires Javascript, sorry 😔</noscript> 
+		<script src="https://unpkg.com/d3@6.2.0/dist/d3.min.js"></script>
+		<script src="https://unpkg.com/suncalc@1.8.0/suncalc.js"></script>
+		<script>
+		const w = 300
+		const r = 0.4
+		const fontScale = 0.05
+		const minorTicks = 4
+		const nthNumeral = 2
+		const numeralRadius = 0.78
+		const majorTickSize = 0.11
+		const minorTickSize = 0.09
+		const majorTickWidth = 2
+		const centreRadius = 0.08
+		const sunRadius = 1.15
+		const sunSize = 4
+		const tickColor = 'black'
+		const handColor = '#c0392b'
+		const sunColor = '#f39c12'
+
+		const decimalTime = function (time = new Date()) {
+			const hour = +d3.timeFormat('%H')(time)
+			const min = +d3.timeFormat('%M')(time)
+			return (hour + (min / 60)) / 24
+		}
+
+		const svg = d3.select('body').append('svg')
+			.attr('viewBox', [0, 0, w, w])
+
+		const ctx = svg.append('g')
+			.attr('transform', `
+				translate(${0.5 * w}, ${0.5 * w})
+				rotate(180)
+			`)
+			.attr('font-size', fontScale * w)
+
+		const hours = ctx.append('g').selectAll('text')
+			.data(d3.range(24))
+			.join('text')
+			.text(d => d % nthNumeral === 0 ? d : null)
+			.attr('x', 0)
+			.attr('y', 0)
+			.attr('dy', '0.35em')
+			.attr('text-anchor', 'middle')
+			.attr('transform', d => `
+				rotate(${360 * d / 24})
+				translate(0, ${(-numeralRadius * r * w)})
+			`)
+
+		const ticks = ctx.append('g').selectAll('path')
+			.data(d3.range(24 * minorTicks))
+			.join('path')
+			.attr('d', d => {
+				if (d % minorTicks === 0) return `M 0,0 v ${majorTickSize * r * w}`
+				else return `M 0,0 v ${minorTickSize * r * w}`
+			})
+			.attr('stroke', tickColor)
+			.attr('stroke-width', d => d % minorTicks === 0 ? majorTickWidth : 1)
+			.attr('transform', d => `
+				rotate(${360 * d / (24 * minorTicks)})
+				translate(0, ${-r * w})
+			`)
+			
+		const halfSun = d3.arc()
+			.innerRadius(0)
+			.outerRadius(sunSize)
+			.startAngle(0)
+			.endAngle(Math.PI)
+			
+		const sunrise = ctx.append('g').append('circle')
+			.attr('r', sunSize)
+			.attr('fill', sunColor)
+			.attr('transform', d => `
+				rotate(0)
+				translate(0, ${(-sunRadius * r * w) + sunSize})
+			`)
+			.style('visibility', 'hidden')
+			
+		const sunset = ctx.append('g').append('circle')
+			.attr('r', sunSize)
+			.attr('fill', sunColor)
+			.attr('transform', d => `
+				rotate(0)
+				translate(0, ${(-sunRadius * r * w) + sunSize})
+				rotate(180)
+			`)
+			.style('visibility', 'hidden')
+
+		const hand = ctx.append('path')
+			.attr('d', `
+				M -${0.5 * majorTickWidth}, ${-r * w}
+				L ${0.5 * majorTickWidth}, ${-r * w}
+				L 3, ${0.16 * r * w}
+				L -3, ${0.16 * r * w}
+			`)
+			.attr('fill', handColor)
+
+		const centre = ctx.append('circle')
+			.attr('fill', handColor)
+			.attr('r', centreRadius * r * w)
+
+		const updateTime = function () {
+			hand.transition()
+				.attr('transform', `rotate(${decimalTime() * 360})`)
+		}
+
+		const timer = d3.interval(updateTime, 10000)
+
+		document.addEventListener("visibilitychange", function () {
+			if (document.visibilityState === 'visible') updateTime()
+		})
+		
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(function (position) {
+				const lat = position.coords.latitude
+				const long = position.coords.longitude
+				const date = new Date()
+				const times = SunCalc.getTimes(date, lat, long)
+				
+				sunrise
+					.attr('transform', d => `
+						rotate(${decimalTime(times.sunrise) * 360})
+						translate(0, ${(-sunRadius * r * w) + sunSize})
+					`)
+					.style('visibility', 'visible')
+				
+				sunset
+					.attr('transform', d => `
+						rotate(${decimalTime(times.sunset) * 360})
+						translate(0, ${(-sunRadius * r * w) + sunSize})
+						rotate(180)
+					`)
+					.style('visibility', 'visible')
+			})
+		}
+		
+		updateTime()
+		</script>
+	</body>
 </html>
